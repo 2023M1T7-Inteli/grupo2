@@ -1,0 +1,81 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://menu/menu.gd" type="Script" id=1]
+[ext_resource path="res://assets/Retro Gaming.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/botao_start.png" type="Texture" id=3]
+[ext_resource path="res://assets/botao_info.png" type="Texture" id=4]
+[ext_resource path="res://assets/botao_config.png" type="Texture" id=5]
+[ext_resource path="res://assets/cenário_farol_de_ponta_verde.png" type="Texture" id=7]
+[ext_resource path="res://assets/nuvem.png" type="Texture" id=8]
+[ext_resource path="res://assets/background.png" type="Texture" id=9]
+[ext_resource path="res://menu/nuvem.gd" type="Script" id=10]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 12.8
+height = 1.52588e-05
+
+[sub_resource type="DynamicFont" id=1]
+size = 80
+font_data = ExtResource( 2 )
+
+[node name="menu" type="Control"]
+script = ExtResource( 1 )
+
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 512, 304 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 9 )
+
+[node name="nuvem" type="KinematicBody2D" parent="."]
+position = Vector2( 128, 152 )
+scale = Vector2( 2.5, 2.5 )
+script = ExtResource( 10 )
+
+[node name="Sprite" type="Sprite" parent="nuvem"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="nuvem"]
+shape = SubResource( 2 )
+
+[node name="fundo_menu" type="Sprite" parent="."]
+position = Vector2( 513, 269 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 7 )
+
+[node name="alagoritmo" type="Label" parent="."]
+margin_left = 408.0
+margin_top = 17.0
+margin_right = 940.0
+margin_bottom = 119.0
+custom_fonts/font = SubResource( 1 )
+text = "Alagoritmo"
+
+[node name="botoes" type="CanvasLayer" parent="."]
+
+[node name="play" type="TextureButton" parent="botoes"]
+margin_left = 744.0
+margin_top = 112.0
+margin_right = 824.0
+margin_bottom = 152.0
+rect_scale = Vector2( 2.5, 2.5 )
+texture_normal = ExtResource( 3 )
+
+[node name="config" type="TextureButton" parent="botoes"]
+margin_left = 744.0
+margin_top = 216.0
+margin_right = 824.0
+margin_bottom = 256.0
+rect_scale = Vector2( 2.5, 2.5 )
+texture_normal = ExtResource( 5 )
+
+[node name="info" type="TextureButton" parent="botoes"]
+margin_left = 744.0
+margin_top = 320.0
+margin_right = 824.0
+margin_bottom = 360.0
+rect_scale = Vector2( 2.5, 2.5 )
+texture_normal = ExtResource( 4 )
+
+[connection signal="pressed" from="botoes/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="botoes/config" to="." method="_on_config_pressed"]
+[connection signal="pressed" from="botoes/info" to="." method="_on_info_pressed"]
