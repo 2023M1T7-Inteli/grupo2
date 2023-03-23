@@ -1,0 +1,284 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://niveis/cordel1/nivel5/cartas-nivel5.gd" type="Script" id=1]
+[ext_resource path="res://niveis/cordel1/nivel5/instrucoes-nivel5.gd" type="Script" id=2]
+[ext_resource path="res://niveis/cordel1/nivel5/nivel5.gd" type="Script" id=3]
+[ext_resource path="res://assets/botao_lixeira.png" type="Texture" id=4]
+[ext_resource path="res://assets/plataforma.png" type="Texture" id=5]
+[ext_resource path="res://assets/cenario_batalha.png" type="Texture" id=6]
+[ext_resource path="res://assets/espaco_instrucoes.png" type="Texture" id=7]
+[ext_resource path="res://assets/base_cartas.png" type="Texture" id=8]
+[ext_resource path="res://assets/instrucoes_borda.png" type="Texture" id=9]
+[ext_resource path="res://assets/botao_play.png" type="Texture" id=10]
+[ext_resource path="res://assets/botao_olho_base.png" type="Texture" id=11]
+[ext_resource path="res://assets/cenario_instrucoes.png" type="Texture" id=12]
+[ext_resource path="res://cenas_universais/botaoVoltaMenu.tscn" type="PackedScene" id=13]
+[ext_resource path="res://cenas_universais/jogador.tscn" type="PackedScene" id=14]
+[ext_resource path="res://cenas_universais/mensagem_derrota.tscn" type="PackedScene" id=15]
+[ext_resource path="res://cenas_universais/Dash/dash.tscn" type="PackedScene" id=16]
+[ext_resource path="res://cenas_universais/mensagem_vitoria.tscn" type="PackedScene" id=17]
+[ext_resource path="res://assets/Retro Gaming.ttf" type="DynamicFontData" id=18]
+
+[sub_resource type="DynamicFont" id=13]
+size = 14
+font_data = ExtResource( 18 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 45
+font_data = ExtResource( 18 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 39, 38.25 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 84, 10 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 93, 10 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 10, 69 )
+
+[node name="nivel6" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 225, 162 )
+scale = Vector2( 3.5, 3.5 )
+texture = ExtResource( 6 )
+
+[node name="fundo" type="Sprite" parent="."]
+position = Vector2( 256, 150 )
+texture = ExtResource( 12 )
+
+[node name="s_instrucao1" type="Sprite" parent="fundo"]
+position = Vector2( 190, -110.5 )
+scale = Vector2( 1.1905, 1 )
+texture = ExtResource( 7 )
+
+[node name="borda_instrucao1" type="Sprite" parent="fundo"]
+visible = false
+position = Vector2( 190.15, -110 )
+scale = Vector2( 1.18797, 1 )
+texture = ExtResource( 9 )
+
+[node name="s_instrucao2" type="Sprite" parent="fundo"]
+position = Vector2( 190, -37 )
+scale = Vector2( 1.1905, 1 )
+texture = ExtResource( 7 )
+
+[node name="borda_instrucao2" type="Sprite" parent="fundo"]
+visible = false
+position = Vector2( 190.15, -37 )
+scale = Vector2( 1.18797, 1 )
+texture = ExtResource( 9 )
+
+[node name="s_instrucao3" type="Sprite" parent="fundo"]
+position = Vector2( 190, 36 )
+scale = Vector2( 1.1905, 1 )
+texture = ExtResource( 7 )
+
+[node name="borda_instrucao3" type="Sprite" parent="fundo"]
+visible = false
+position = Vector2( 190.15, 36 )
+scale = Vector2( 1.18797, 1 )
+texture = ExtResource( 9 )
+
+[node name="dash" parent="." instance=ExtResource( 16 )]
+
+[node name="cartas" type="Node" parent="."]
+script = ExtResource( 1 )
+
+[node name="carta0" type="TextureButton" parent="cartas"]
+margin_left = 83.0
+margin_top = 192.0
+margin_right = 115.0
+margin_bottom = 234.0
+rect_scale = Vector2( 2.1, 2.1 )
+texture_normal = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="numero" type="Label" parent="cartas/carta0"]
+margin_right = 32.0
+margin_bottom = 42.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+align = 1
+valign = 1
+
+[node name="carta1" type="TextureButton" parent="cartas"]
+margin_left = 159.0
+margin_top = 192.0
+margin_right = 191.0
+margin_bottom = 234.0
+rect_scale = Vector2( 2.1, 2.1 )
+texture_normal = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="numero" type="Label" parent="cartas/carta1"]
+margin_right = 32.0
+margin_bottom = 42.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+align = 1
+valign = 1
+
+[node name="carta2" type="TextureButton" parent="cartas"]
+margin_left = 235.0
+margin_top = 192.0
+margin_right = 267.0
+margin_bottom = 234.0
+rect_scale = Vector2( 2.1, 2.1 )
+texture_normal = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="numero" type="Label" parent="cartas/carta2"]
+margin_right = 32.0
+margin_bottom = 42.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+align = 1
+valign = 1
+
+[node name="instrucoes" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="instrucao1" type="Label" parent="instrucoes"]
+margin_left = 384.0
+margin_top = 9.0
+margin_right = 508.0
+margin_bottom = 71.0
+custom_fonts/font = SubResource( 2 )
+align = 1
+valign = 1
+
+[node name="instrucao2" type="Label" parent="instrucoes"]
+margin_left = 384.0
+margin_top = 82.0
+margin_right = 508.0
+margin_bottom = 144.0
+custom_fonts/font = SubResource( 2 )
+align = 1
+valign = 1
+
+[node name="instrucao3" type="Label" parent="instrucoes"]
+margin_left = 384.0
+margin_top = 155.0
+margin_right = 508.0
+margin_bottom = 217.0
+custom_fonts/font = SubResource( 2 )
+align = 1
+valign = 1
+
+[node name="botoes" type="Node" parent="."]
+
+[node name="botao_pronto" type="TextureButton" parent="botoes"]
+margin_left = 384.0
+margin_top = 224.0
+margin_right = 424.0
+margin_bottom = 264.0
+rect_scale = Vector2( 1.75, 1.75 )
+texture_normal = ExtResource( 10 )
+
+[node name="botao_lixeira" type="TextureButton" parent="botoes"]
+margin_left = 451.0
+margin_top = 229.0
+margin_right = 491.0
+margin_bottom = 269.0
+rect_scale = Vector2( 1.5, 1.5 )
+texture_normal = ExtResource( 4 )
+
+[node name="botaoVoltaMenu" parent="botoes" instance=ExtResource( 13 )]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 21.0
+margin_bottom = 21.0
+rect_scale = Vector2( 2, 2 )
+
+[node name="botao_olho" type="TextureButton" parent="botoes"]
+modulate = Color( 0, 1, 0, 1 )
+margin_left = 343.0
+margin_top = 129.0
+margin_right = 384.0
+margin_bottom = 171.0
+texture_normal = ExtResource( 11 )
+
+[node name="pisos" type="Node" parent="."]
+
+[node name="piso_esquerda" type="Area2D" parent="pisos"]
+position = Vector2( 102, 144 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="pisos/piso_esquerda"]
+scale = Vector2( 6, 5 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pisos/piso_esquerda"]
+position = Vector2( 0.5, -69.75 )
+shape = SubResource( 14 )
+
+[node name="mensagens" type="Node" parent="."]
+
+[node name="mensagem_vitoria" parent="mensagens" instance=ExtResource( 17 )]
+visible = false
+nivelRestart = "res://niveis/cordel1/nivel5/nivel5.tscn"
+nivelProximo = "res://niveis/cordel1/bossC/bossCangaceiro.tscn"
+
+[node name="mensagem_derrota" parent="mensagens" instance=ExtResource( 15 )]
+visible = false
+nivelRestart = "res://niveis/cordel1/nivel5/nivel5.tscn"
+voltaMenu = "res://menu/menu.tscn"
+
+[node name="colisoes" type="Node" parent="."]
+
+[node name="colisao_cima" type="StaticBody2D" parent="colisoes"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colisoes/colisao_cima"]
+position = Vector2( 108, 4 )
+shape = SubResource( 10 )
+
+[node name="colisao_baixo" type="StaticBody2D" parent="colisoes"]
+position = Vector2( 24, 272 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colisoes/colisao_baixo"]
+position = Vector2( 83, 0 )
+shape = SubResource( 11 )
+
+[node name="colisao_esquerda" type="StaticBody2D" parent="colisoes"]
+position = Vector2( 9, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colisoes/colisao_esquerda"]
+position = Vector2( 0, 59 )
+shape = SubResource( 12 )
+
+[node name="Dash" parent="." instance=ExtResource( 16 )]
+
+[node name="jogador" parent="." instance=ExtResource( 14 )]
+position = Vector2( 104, 104 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 256, 151 )
+current = true
+
+[connection signal="pressed" from="cartas/carta0" to="cartas" method="_on_carta0_pressed"]
+[connection signal="pressed" from="cartas/carta0" to="instrucoes" method="_on_carta1_pressed"]
+[connection signal="pressed" from="cartas/carta1" to="cartas" method="_on_carta1_pressed"]
+[connection signal="pressed" from="cartas/carta1" to="instrucoes" method="_on_carta1_pressed"]
+[connection signal="pressed" from="cartas/carta2" to="cartas" method="_on_carta1_pressed"]
+[connection signal="pressed" from="cartas/carta2" to="instrucoes" method="_on_carta1_pressed"]
+[connection signal="pressed" from="botoes/botao_pronto" to="." method="_on_botao_pronto_pressed"]
+[connection signal="pressed" from="botoes/botao_pronto" to="cartas" method="_on_botao_pronto_pressed"]
+[connection signal="pressed" from="botoes/botao_lixeira" to="cartas" method="_on_botao_lixeira_pressed"]
+[connection signal="pressed" from="botoes/botao_lixeira" to="instrucoes" method="_on_botao_lixeira_pressed"]
