@@ -8,25 +8,23 @@
 
 ## all_4_one
 
-## Integrantes: <a href="https://www.linkedin.com/in/victorbarq/">Goku Sayajin</a>, <a href="https://www.linkedin.com/in/victorbarq/">Saitama One</a>, <a href="https://www.linkedin.com/in/victorbarq/">Ikki de Fenix</a>, <a href="https://www.linkedin.com/in/victorbarq/">Yusuke Urameshi</a>, <a href="https://www.linkedin.com/in/victorbarq/">Roronoa Zoro</a>
+## Integrantes: <a href="https://www.linkedin.com/in/ana-carolina-cremonezi-martire-2a7335268">Ana "Kakau" Martire</a>, 
+<a href="https://www.linkedin.com/in/victorbarq/">Cecília Gonçalves</a>,
+<a href="https://www.linkedin.com/in/victorbarq/">Felipe Braga</a>, 
+<a href="https://www.linkedin.com/in/victorbarq/">Felipe Sabino Spina</a>, 
+<a href="https://www.linkedin.com/in/mauro-das-chagas-junior-7306a71b9/">Mauro  das Chagas Junior</a>, 
+<a href="https://www.linkedin.com/in/renan-feitosa-44328524a">Renan Feitosa</a>, 
+<a href="https://www.linkedin.com/in/victorbarq/">Ricardo Novaes</a>
 
 ## Descrição
 
-📜 Descrição curta sobre o que seu projeto faz.
-<br><br>
-Meu projeto é um exemplo de como utilizar o github.
+Alagoritmo é um jogo educativo focado no ensino de matemática e pensamento computacional para crianças do ensino público de Alagoas. Com um design simples e marcado pela cultura Alagoana, Alagoritmo visa tornar o aprendizado mais dinâmico e de fácil identificação, assim contornando dificuldades e democratizando o acesso ao aprendizado de computação.
 <br><br>
 <p align="center">
-<img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="NOME DO JOGO" border="0">
-  Game by <a href="http://www.nyphotographic.com/">Nick Youngson</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a href="http://pix4free.org/">Pix4free</a>
+<img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="Alagoritmo" border="0">
 </p>
 
-
-💡 De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
-<br><br>
-Meu projeto ajuda estudantes inteli a configurarem seus githubs.
-<br><br>
-May the force be with you!
+Alagoritmo visa ensinar o pensamento computacional e matemática para crianças do ensino básico de Alagoas de forma lúdica e dinâmica, para isso ele foi estruturado como um RPG de turnos no qual o jogador precisa passar pelas 4 fases do pensamento computacional: Reconhecimento de padrões, decomposição, abstração e algoritmo. Em um primeiro momento, a criança terá a oportunidade de ver a movimentação/acontecimentos de uma fase, a partir disso é esperado que ela desenvolva seu reconhecimento de padrões. Após isso, ela terá que decompor esses padrões em partes menores para que assim possa abstrair a situação e gerar um algoritmo que solucione o problema que está sendo proposto pelo jogo. Por meio dessa sequência de ações, esperamos que a criança consiga desenvolver suas habilidades computacionais e de matemática de forma lúdica e dinâmica.
 <br><br>
 
 ## 🛠 Estrutura de pastas
@@ -85,11 +83,9 @@ Encontre o index.html na pasta executáveis e execute-o como uma página WEB (at
 
 Para abrir este projeto você necessita das seguintes ferramentas:
 
--<a href="https://godotengine.org/download">GODOT</a>
+* <a href="https://godotengine.org/download">GODOT</a>
 
 ## 🗃 Histórico de lançamentos
-
-A cada atualização os detalhes devem ser lançados aqui.
 
 * 0.2.1 - 25/01/2022
     * MUDANÇA: Atualização de docs (código do módulo permanece inalterado)
