@@ -8,21 +8,17 @@
 
 ## all_4_one
 
-## Integrantes: <a href="https://www.linkedin.com/in/ana-carolina-cremonezi-martire-2a7335268">Ana "Kakau" Martire</a>, 
-<a href="https://www.linkedin.com/in/victorbarq/">Cecília Gonçalves</a>,
-<a href="https://www.linkedin.com/in/victorbarq/">Felipe Braga</a>, 
-<a href="https://www.linkedin.com/in/victorbarq/">Felipe Sabino Spina</a>, 
-<a href="https://www.linkedin.com/in/mauro-das-chagas-junior-7306a71b9/">Mauro  das Chagas Junior</a>, 
-<a href="https://www.linkedin.com/in/renan-feitosa-44328524a">Renan Feitosa</a>, 
-<a href="https://www.linkedin.com/in/victorbarq/">Ricardo Novaes</a>
+## Integrantes: <a href="https://www.linkedin.com/in/ana-carolina-cremonezi-martire-2a7335268">Ana "Kakau" Martire</a>, Cecília Gonçalves, Felipe Braga, Felipe Spina, Lucas de Luccas, <a href="https://www.linkedin.com/in/mauro-das-chagas-junior-7306a71b9/">Mauro das Chagas</a>, <a href="https://www.linkedin.com/in/renan-feitosa-44328524a">Renan Feitosa</a>, Ricardo Novaes
 
 ## Descrição
 
 Alagoritmo é um jogo educativo focado no ensino de matemática e pensamento computacional para crianças do ensino público de Alagoas. Com um design simples e marcado pela cultura Alagoana, Alagoritmo visa tornar o aprendizado mais dinâmico e de fácil identificação, assim contornando dificuldades e democratizando o acesso ao aprendizado de computação.
 <br><br>
-<p align="center">
-<img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="Alagoritmo" border="0">
-</p>
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/123962654/227363176-26ffccce-a443-4113-8388-9cc41950fc80.jpg" width="1200px" />
+</div>
+<br><br>
 
 Alagoritmo visa ensinar o pensamento computacional e matemática para crianças do ensino básico de Alagoas de forma lúdica e dinâmica, para isso ele foi estruturado como um RPG de turnos no qual o jogador precisa passar pelas 4 fases do pensamento computacional: Reconhecimento de padrões, decomposição, abstração e algoritmo. Em um primeiro momento, a criança terá a oportunidade de ver a movimentação/acontecimentos de uma fase, a partir disso é esperado que ela desenvolva seu reconhecimento de padrões. Após isso, ela terá que decompor esses padrões em partes menores para que assim possa abstrair a situação e gerar um algoritmo que solucione o problema que está sendo proposto pelo jogo. Por meio dessa sequência de ações, esperamos que a criança consiga desenvolver suas habilidades computacionais e de matemática de forma lúdica e dinâmica.
 <br><br>
@@ -73,12 +69,12 @@ Encontre o JOGO.exe na pasta executáveis e execute-o como qualquer outro progra
 <b>HTML:</b>
 
 Não há instalação!
-Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser).
+Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser). Ou acesse diretamente clicando <a href="https://2023m1t7-inteli.github.io/grupo2/">aqui</a>
 
 ## 💻 Configuração para Desenvolvimento
 
-1 - Faça o download do GODOT e deste repositório.
-2 - Abra o GODOT, ao ser prontificado clique em IMPORTAR.
+1 - Faça o download do GODOT e deste repositório. <br>
+2 - Abra o GODOT, ao ser prontificado clique em IMPORTAR. <br>
 3 - Selecione a pasta onde descompactou este repositório.
 
 Para abrir este projeto você necessita das seguintes ferramentas:
@@ -87,18 +83,55 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 
 ## 🗃 Histórico de lançamentos
 
-* 0.2.1 - 25/01/2022
-    * MUDANÇA: Atualização de docs (código do módulo permanece inalterado)
-* 0.2.0 - 15/01/2022
-    * MUDANÇA: Remove `setDefaultXYZ()`
-    * ADD: Adiciona `init()`
-* 0.1.1 - 11/01/2022
-    * CONSERTADO: Crash quando chama `baz()` (Obrigado @NomeDoContribuidorGeneroso!)
-* 0.1.0 - 10/01/2022
-    * O primeiro lançamento adequado
-    * MUDANÇA: Renomeia `foo()` para `bar()`
-* 0.0.1 - 01/01/2022
-    * Trabalho em andamento
+* 2.3.0 - 23/03/2023
+    * Versão 2.3 do alagoritmo upada para o Github.
+    * CORRIGIDO: Mudança nos sprite da carta "esperar", colocamos uma ampulheta para facilitar a visualização.
+    * CORRIGIDO: Bug na posição do personagem ao iniciar a fase.
+    * CORRIGIDO: Bug nos links dos botões de cada cena.
+    * MUDANÇA: Nova reestruturação das pastas para melhorar a organização.
+    * MUDANÇA: Troca das 3 fases de tutorial por novas 5 fases novas, reestruturadas e mais didáticas.
+        * Mudança necessária por conta da dificuldade que muitos testers tiveram para compreender a mecânica.
+    * MUDANÇA: Mudança da posição, tamanho e usabilidade do botão de verificação de padrão dos inimigos.
+        * Mudança necessária porque muitos testers tiveram dificuldade para usar essa mecânica.
+    * ADD: Mais sprites que foram usados para o desenvolvimento das fases.
+    * ADD: Introdução de um tutorial com "mãos" que indicam aonde o jogador deve clicar para facilitar a compreensão.
+        * Adição necessária por conta da dificuldade de compreender as mecânicas do jogo de alguns testers.
+    * ADD: Adição da fase do "Lume" o principal antagonista de alagoritmo (fase com 6 estágios e todas as mecânicas do jogo).
+    * ADD: Adição da última mecânica do jogo: Carta que simula um looping da programação.
+* 1.9.7 - 07/03/2023
+    * Versão 1.9.7 (Muito parecida com a 1.9.6, apenas com breves correções antes dos testes).
+    * CORRIGIDO: Bug das cartas não serem desativadas após serem clicadas.
+    * CORRIGIDO: Bug em um desafio do "Boss Cangaceiro" (conta estava dando errado mesmo acertando o resultado).
+    * CORRIGIDO: Exclusão de algumas pastas que não estavam sendo utilizadas no jogo.
+    * CORRIGIDO: Melhora na organização e estruturação das pastas.
+    * ADD: Cartas ficam opacas enquanto desativadas (ainda não em todas as fases).
+    * ADD: Algumas labels direcionando ações para auxiliar os testers durante a testagem do jogo.
+* 1.9.6 - 07/03/2023
+    * Versão 1.9.6 do alagoritmo upada para o Github com objetivo de testarmos o jogo.
+    * MUDANÇA: Troca das 2 fases de introdução por 3 fases que introduzem as duas mecânicas do jogo.
+    * ADD: Mais sprites que foram usados para o desenvolvimento das fases.
+    * ADD: Mecânica da movimentação por setas.
+    * ADD: Mecânica do botão de visualização dos padrões dos inimigos.
+    * ADD: Botão para excluir as instruções que foram selecionadas incorretamente.
+    * ADD: Fase do "Boss Cangaceiro" com 5 estágios e uma mescla de todas as mecânicas do jogo.
+    * ADD: Carta especial com a função de esperar uma rodada.
+    * ADD: Efeito (brilhante) de dash movimentação do personagem (Obrigado Renan =]).
+    * ADD: Efeito (brilhante) de shake para quando o personagem leva dano (Obrigado Kakau =]).
+    * ADD: Animação de dano no "Boss Cangaceiro" para quando ele é acertado por algum golpe.
+* 1.2.0 - 23/02/2023
+    * Versão 1.2 do alagoritmo upada para o Github.
+    * ADD: Criação de duas fases que demonstram brevemente a mecânica do jogo.
+    * ADD: Mecânica das contas matemáticas.
+    * ADD: Mais sprites que foram usados para o desenvolvimento das fases.
+    * ADD: Pixel art baseada no farol da ponta verde para ser o background do jogo.
+    * ADD: Classe da tela de vitória e tela de derrota.
+    * ADD: Botão de configuração e de informações (embora ainda não façam nada).
+    * ADD: Organização em pastas para estruturar as fases do jogo.
+    * ADD: Criação da tela de seleção de nível.
+    * ADD: Primeiro inimigo colocado em um nível.
+* 0.7.0 - 09/02/2023
+    * Versão 0.7 do alagoritmo upada para o Github.
+    * O jogo possuia apenas uma interface simples de menu e um esboço do nível 1.
 
 ## 📋 Licença/License
 
@@ -108,8 +141,5 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 
 Aqui estão as referências usadas no projeto.
 
-1. <https://github.com/iuricode/readme-template>
-2. <https://github.com/gabrieldejesus/readme-model>
-3. <https://creativecommons.org/share-your-work/>
-4. <https://freesound.org/>
-5. Músicas por: <a href="https://freesound.org/people/DaveJf/sounds/616544/"> DaveJf </a> e <a href="https://freesound.org/people/DRFX/sounds/338986/"> DRFX </a> ambas com Licença CC 0.
+1. <https://laart.art.br/blog/cordeis-famosos/>
+2. <http://www.ablc.com.br/o-cordel/cordeis-digitalizados/>
