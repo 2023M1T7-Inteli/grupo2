@@ -83,6 +83,11 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 
 ## 🗃 Histórico de lançamentos
 
+* 2.4.0 - 24/03/2023
+    * Versão 2.4 do alagoritmo upada para o Github.
+    * CORRIGIDO: Bug da tela de vitória travando a fase do Lume.
+    * CORRIGIDO: Colisão que deletava as instâncias do Aluado na fase 04.
+    * CORRIGIDO: Links dos menus ajustados.
 * 2.3.0 - 23/03/2023
     * Versão 2.3 do alagoritmo upada para o Github.
     * CORRIGIDO: Mudança nos sprite da carta "esperar", colocamos uma ampulheta para facilitar a visualização.
