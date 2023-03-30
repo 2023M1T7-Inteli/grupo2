@@ -83,6 +83,23 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 
 ## 🗃 Histórico de lançamentos
 
+* 2.8.0 - 30/03/2023
+    * Versão 2.8 do alagoritmo upada para o Github.
+    * CORRIGIDO: Bug nas posições entre os estágios da fase do Lume (boss final) e do cangaceiro.
+    * CORRIGIDO: Bug da conta do estágio 5 sumir muito rápido da tela.
+    * CORRIGIDO: Bug dos estágios da fase do Lume (boss final) não estarem salvando.
+        * Correção necessária porque causava muita frustração para os testers porque perdiam todo seu progresso.
+    * CORRIGIDO: Links das telas de vitória e derrota corrigidos, agora mandam para as telas corretas.
+    * CORRIGIDO: Bug do cangaceiro já começar levando dano no começo do estágio 5.
+    * CORRIGIDO: Bug do jogador poder ir para baixo das plataformas e sair da área jogável do game.
+    * CORRIGIDO: Bug do jogo travar quando o jogador coloca o looping na última posição das instruções.
+    * CORRIGIDO: Bug da conta no último estágio da fase do Lume (boss final) não estar sendo considerada como correta.
+    * CORRIGIDO: Bug de ser possível passar dos estágios dos bosses sem fazer as contas.
+    * MUDANÇA: Agora as contas são mantidas entre os estágios para que o jogador possa fazê-las com mais calma.
+    * MUDANÇA: Botão de rodar as intruções fica desativado no nível 1 enquanto o jogador não apertar a primeira carta.
+    * MUDANÇA: Botão "pronto" agora fica desabilitado enquanto o botão de padrões estiver ativo.
+    * ADD: Tela com uma breve explicação sobre o funcionamento da carta de "espera" e do botão de "padrões".
+        * Adição necessária porque muitos testers ainda tiveram dificuldade de compreender essas duas mecânicas.
 * 2.4.0 - 24/03/2023
     * Versão 2.4 do alagoritmo upada para o Github.
     * CORRIGIDO: Bug da tela de vitória travando a fase do Lume.
