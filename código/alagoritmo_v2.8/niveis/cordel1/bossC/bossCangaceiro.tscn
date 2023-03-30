@@ -1,0 +1,499 @@
+[gd_scene load_steps=41 format=2]
+
+[ext_resource path="res://cenas_universais/mensagem_derrota.tscn" type="PackedScene" id=1]
+[ext_resource path="res://cenas_universais/botaoVoltaMenu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://cenas_universais/mensagem_vitoria.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/Retro Gaming.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/base_cartas.png" type="Texture" id=5]
+[ext_resource path="res://assets/instrucoes_borda.png" type="Texture" id=6]
+[ext_resource path="res://assets/cenario_instrucoes.png" type="Texture" id=7]
+[ext_resource path="res://assets/botao_lixeira.png" type="Texture" id=8]
+[ext_resource path="res://assets/cenario_batalha.png" type="Texture" id=9]
+[ext_resource path="res://assets/cangaceiro_boss_dark.png" type="Texture" id=10]
+[ext_resource path="res://assets/botao_play.png" type="Texture" id=11]
+[ext_resource path="res://assets/espaco_instrucoes.png" type="Texture" id=12]
+[ext_resource path="res://assets/plataforma.png" type="Texture" id=13]
+[ext_resource path="res://assets/plataforma_pequena.png" type="Texture" id=14]
+[ext_resource path="res://niveis/cordel1/bossC/bossC_cartas.gd" type="Script" id=15]
+[ext_resource path="res://cenas_universais/jogador.tscn" type="PackedScene" id=16]
+[ext_resource path="res://niveis/cordel1/bossC/bossC_instrucoes.gd" type="Script" id=17]
+[ext_resource path="res://assets/botao_olho_base.png" type="Texture" id=18]
+[ext_resource path="res://cenas_universais/Dash/dash.tscn" type="PackedScene" id=19]
+[ext_resource path="res://niveis/cordel1/bossC/bossCangaceiro.gd" type="Script" id=20]
+[ext_resource path="res://cenas_universais/estagio.tscn" type="PackedScene" id=21]
+[ext_resource path="res://sons/som_dash.wav" type="AudioStream" id=22]
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 168, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 224, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 280, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 336, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 392, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 0, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 56, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 112, 64, 56 )
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
+"loop": true,
+"name": "dano",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
+"loop": true,
+"name": "idle",
+"speed": 1.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=14]
+radius = 32.0
+height = 54.0
+
+[sub_resource type="DynamicFont" id=13]
+size = 14
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 45
+font_data = ExtResource( 4 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 39, 38.25 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 84, 10 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 93, 10 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 10, 69 )
+
+[sub_resource type="DynamicFont" id=21]
+size = 24
+font_data = ExtResource( 4 )
+
+[sub_resource type="AudioStreamMP3" id=22]
+data = PoolByteArray( 73, 68, 51, 3, 0, 0, 0, 0, 0, 124, 84, 69, 78, 67, 0, 0, 0, 75, 0, 0, 1, 255, 254, 87, 0, 97, 0, 118, 0, 101, 0, 80, 0, 97, 0, 100, 0, 32, 0, 84, 0, 114, 0, 105, 0, 97, 0, 108, 0, 32, 0, 86, 0, 101, 0, 114, 0, 115, 0, 105, 0, 111, 0, 110, 0, 32, 0, 169, 0, 32, 0, 78, 0, 67, 0, 72, 0, 32, 0, 83, 0, 111, 0, 102, 0, 116, 0, 119, 0, 97, 0, 114, 0, 101, 0, 84, 83, 83, 69, 0, 0, 0, 29, 0, 0, 1, 255, 254, 76, 0, 97, 0, 118, 0, 102, 0, 53, 0, 56, 0, 46, 0, 52, 0, 53, 0, 46, 0, 49, 0, 48, 0, 48, 0, 255, 251, 144, 100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 73, 110, 102, 111, 0, 0, 0, 15, 0, 0, 0, 6, 0, 0, 11, 108, 0, 42, 42, 42, 42, 42, 42, 42, 42, 42, 42, 42, 42, 42, 42, 42, 42, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 213, 213, 213, 213, 213, 213, 213, 213, 213, 213, 213, 213, 213, 213, 213, 213, 213, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 57, 76, 65, 77, 69, 51, 46, 57, 57, 114, 1, 170, 0, 0, 0, 0, 46, 30, 0, 0, 20, 128, 36, 5, 86, 78, 0, 0, 128, 0, 0, 11, 108, 214, 20, 205, 170, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 251, 144, 100, 0, 0, 3, 81, 88, 61, 133, 25, 0, 0, 51, 100, 23, 160, 160, 8, 0, 16, 121, 105, 115, 248, 249, 16, 25, 31, 51, 46, 207, 0, 116, 66, 104, 32, 67, 15, 7, 11, 79, 177, 0, 0, 0, 132, 24, 8, 2, 224, 222, 195, 128, 80, 2, 128, 40, 30, 80, 160, 165, 111, 255, 242, 239, 255, 232, 136, 159, 254, 136, 137, 184, 160, 161, 137, 203, 190, 247, 165, 123, 186, 114, 238, 239, 127, 232, 136, 137, 164, 139, 131, 113, 123, 32, 202, 32, 80, 196, 78, 94, 248, 68, 68, 74, 148, 74, 255, 66, 5, 197, 207, 189, 17, 43, 255, 255, 255, 249, 255, 132, 20, 20, 20, 161, 112, 104, 13, 3, 193, 68, 4, 28, 8, 28, 254, 24, 88, 62, 15, 255, 255, 255, 255, 255, 206, 119, 32, 24, 25, 243, 158, 82, 8, 6, 11, 131, 229, 207, 130, 11, 15, 193, 0, 65, 202, 57, 255, 255, 203, 135, 192, 0, 129, 201, 119, 136, 3, 28, 64, 112, 160, 32, 114, 92, 16, 206, 9, 14, 19, 193, 6, 97, 101, 6, 112, 120, 7, 145, 102, 15, 207, 160, 101, 40, 16, 10, 30, 46, 216, 11, 131, 196, 90, 172, 133, 156, 133, 129, 70, 245, 166, 33, 54, 116, 163, 156, 114, 8, 32, 44, 100, 52, 152, 34, 139, 39, 19, 16, 96, 42, 3, 168, 241, 56, 105, 47, 187, 32, 65, 16, 78, 95, 55, 154, 39, 166, 65, 216, 159, 32, 135, 141, 243, 116, 221, 51, 51, 115, 3, 73, 177, 162, 101, 118, 166, 154, 10, 95, 243, 115, 114, 227, 84, 139, 169, 57, 162, 116, 16, 254, 95, 47, 200, 161, 56, 203, 47, 187, 42, 164, 27, 255, 247, 83, 50, 12, 134, 164, 40, 55, 77, 63, 255, 254, 131, 57, 95, 152, 120, 6, 175, 226, 68, 126, 45, 220, 164, 4, 27, 255, 255, 255, 255, 238, 221, 68, 6, 18, 48, 195, 13, 113, 121, 135, 188, 72, 40, 84, 185, 147, 200, 24, 97, 49, 185, 232, 99, 28, 195, 162, 84, 100, 104, 163, 164, 204, 127, 242, 127, 239, 255, 255, 255, 255, 253, 79, 255, 254, 228, 254, 219, 180, 247, 26, 7, 144, 61, 177, 187, 185, 1, 247, 46, 52, 224, 66, 164, 172, 136, 82, 21, 162, 188, 116, 42, 97, 37, 167, 47, 142, 75, 149, 25, 62, 255, 251, 146, 100, 10, 0, 196, 1, 72, 219, 183, 61, 96, 2, 58, 43, 187, 32, 224, 8, 0, 79, 225, 31, 103, 7, 152, 116, 200, 193, 152, 43, 204, 0, 143, 2, 75, 139, 19, 169, 136, 35, 67, 232, 150, 147, 195, 131, 53, 143, 151, 188, 66, 54, 39, 148, 46, 104, 112, 158, 108, 113, 81, 232, 172, 122, 49, 53, 116, 180, 164, 213, 99, 199, 152, 196, 25, 233, 223, 44, 147, 156, 69, 187, 174, 170, 103, 246, 57, 253, 211, 105, 148, 201, 251, 233, 182, 238, 51, 107, 151, 108, 113, 232, 123, 105, 252, 182, 165, 73, 234, 119, 115, 21, 165, 23, 16, 237, 231, 105, 41, 60, 155, 133, 46, 31, 113, 135, 63, 120, 77, 220, 142, 124, 241, 114, 139, 34, 113, 254, 217, 218, 79, 173, 255, 255, 255, 255, 255, 144, 164, 64, 209, 136, 24, 176, 80, 4, 170, 182, 146, 153, 142, 118, 25, 217, 135, 52, 176, 99, 163, 17, 159, 255, 255, 255, 255, 255, 255, 245, 46, 193, 230, 118, 119, 100, 123, 43, 232, 215, 35, 22, 19, 8, 105, 115, 207, 52, 48, 188, 140, 25, 160, 0, 0, 0, 69, 200, 233, 5, 88, 90, 134, 33, 63, 46, 162, 212, 52, 196, 148, 164, 52, 168, 90, 142, 35, 231, 38, 224, 249, 47, 46, 44, 236, 175, 96, 28, 70, 13, 52, 253, 180, 2, 78, 146, 75, 135, 134, 109, 52, 113, 25, 69, 100, 203, 61, 18, 35, 112, 154, 5, 163, 88, 187, 220, 162, 100, 22, 225, 9, 167, 93, 13, 220, 76, 7, 105, 216, 153, 153, 61, 35, 60, 54, 69, 15, 19, 155, 103, 241, 121, 102, 206, 165, 42, 145, 235, 80, 208, 188, 128, 224, 250, 42, 227, 33, 5, 220, 189, 177, 174, 14, 16, 149, 145, 168, 64, 152, 236, 100, 53, 157, 81, 163, 8, 137, 123, 34, 192, 128, 1, 0, 255, 159, 245, 85, 128, 128, 68, 147, 53, 88, 197, 234, 187, 48, 98, 129, 152, 246, 102, 255, 81, 49, 9, 223, 255, 254, 183, 127, 193, 92, 193, 215, 100, 84, 34, 123, 143, 80, 13, 61, 179, 192, 169, 96, 170, 2, 0, 3, 86, 148, 14, 9, 155, 147, 13, 113, 60, 107, 213, 214, 47, 19, 101, 118, 26, 74, 95, 40, 248, 0, 19, 29, 23, 144, 210, 199, 32, 132, 239, 122, 34, 114, 65, 57, 225, 255, 251, 146, 100, 20, 11, 195, 236, 83, 89, 43, 9, 27, 118, 48, 45, 26, 67, 0, 34, 194, 16, 113, 29, 92, 21, 149, 128, 8, 201, 50, 100, 206, 128, 80, 1, 48, 126, 104, 147, 44, 246, 80, 76, 134, 147, 155, 229, 170, 43, 68, 109, 160, 109, 149, 157, 158, 89, 38, 240, 8, 193, 170, 179, 3, 96, 168, 29, 12, 201, 143, 42, 129, 89, 75, 18, 123, 42, 130, 253, 205, 157, 203, 70, 86, 170, 244, 124, 164, 54, 47, 156, 58, 254, 107, 207, 50, 205, 179, 245, 173, 83, 34, 156, 240, 207, 204, 86, 18, 45, 79, 248, 251, 50, 198, 154, 12, 18, 123, 244, 184, 176, 56, 0, 112, 63, 207, 147, 190, 78, 129, 133, 61, 106, 86, 208, 51, 89, 12, 243, 84, 78, 82, 167, 43, 127, 255, 255, 255, 254, 191, 255, 252, 168, 134, 244, 127, 254, 82, 27, 41, 75, 208, 217, 182, 69, 43, 104, 20, 73, 198, 72, 112, 2, 131, 137, 18, 5, 9, 74, 208, 85, 33, 86, 175, 35, 75, 69, 172, 46, 171, 251, 165, 128, 136, 194, 208, 9, 36, 15, 201, 16, 36, 99, 227, 184, 172, 176, 119, 13, 197, 196, 149, 19, 46, 36, 172, 196, 147, 31, 108, 146, 246, 163, 75, 146, 78, 30, 107, 92, 212, 143, 157, 73, 199, 170, 104, 217, 83, 173, 167, 165, 164, 121, 173, 106, 83, 45, 116, 180, 213, 142, 218, 199, 58, 90, 149, 195, 97, 208, 239, 154, 255, 255, 220, 141, 117, 45, 119, 124, 95, 238, 230, 163, 147, 86, 45, 150, 81, 90, 147, 141, 146, 59, 233, 97, 171, 162, 139, 244, 253, 40, 113, 103, 162, 161, 100, 117, 246, 108, 109, 129, 148, 12, 1, 255, 255, 255, 255, 213, 127, 215, 191, 255, 167, 250, 255, 170, 255, 255, 255, 255, 255, 167, 255, 248, 193, 98, 150, 146, 177, 149, 75, 35, 135, 89, 214, 207, 247, 84, 119, 44, 164, 59, 57, 64, 81, 0, 52, 148, 252, 213, 0, 7, 129, 152, 99, 38, 32, 64, 4, 12, 32, 131, 8, 19, 137, 130, 146, 100, 214, 32, 5, 234, 104, 176, 137, 128, 193, 38, 43, 9, 41, 104, 96, 105, 28, 0, 66, 48, 192, 161, 88, 16, 112, 11, 15, 202, 130, 225, 243, 19, 130, 75, 193, 116, 86, 224, 112, 12, 6, 242, 46, 18, 4, 37, 124, 53, 255, 251, 146, 100, 33, 0, 5, 226, 102, 208, 118, 114, 128, 2, 44, 236, 248, 32, 192, 52, 0, 16, 204, 227, 76, 25, 166, 0, 0, 195, 43, 82, 7, 10, 32, 2, 88, 24, 128, 65, 108, 4, 234, 196, 241, 135, 158, 12, 136, 41, 67, 50, 192, 226, 35, 138, 164, 11, 86, 31, 0, 130, 4, 64, 99, 4, 20, 36, 133, 36, 58, 201, 18, 233, 191, 227, 128, 188, 64, 8, 129, 62, 96, 57, 179, 33, 141, 38, 139, 207, 252, 156, 62, 76, 26, 27, 160, 104, 164, 205, 87, 58, 178, 241, 103, 254, 87, 46, 40, 184, 92, 64, 225, 56, 131, 158, 76, 200, 200, 172, 231, 136, 17, 195, 111, 254, 249, 185, 129, 162, 72, 32, 111, 50, 152, 162, 145, 145, 177, 145, 185, 17, 40, 19, 197, 233, 13, 255, 171, 244, 232, 38, 245, 189, 105, 212, 197, 89, 191, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 254, 84, 23, 175, 255, 255, 207, 168, 39, 195, 40, 123, 18, 68, 178, 208, 29, 198, 4, 176, 109, 14, 18, 87, 255, 234, 255, 255, 56, 56, 79, 26, 210, 75, 136, 245, 19, 1, 45, 53, 138, 109, 190, 118, 1, 194, 85, 242, 220, 190, 219, 189, 235, 25, 115, 61, 177, 16, 4, 1, 1, 219, 40, 7, 100, 128, 62, 79, 100, 236, 191, 10, 250, 27, 150, 50, 197, 86, 139, 66, 50, 152, 54, 240, 28, 48, 102, 189, 105, 202, 86, 63, 237, 214, 196, 103, 138, 41, 124, 187, 13, 46, 171, 191, 223, 111, 201, 187, 119, 88, 179, 150, 227, 86, 154, 102, 118, 205, 242, 151, 223, 89, 74, 124, 228, 244, 203, 193, 80, 153, 7, 6, 45, 38, 8, 2, 109, 150, 168, 2, 18, 61, 242, 129, 128, 124, 210, 37, 193, 228, 56, 168, 24, 42, 1, 179, 196, 234, 50, 24, 255, 244, 187, 255, 214, 144, 0, 19, 248, 239, 24, 7, 255, 255, 244, 116, 255, 106, 255, 250, 45, 80, 191, 254, 139, 79, 255, 249, 82, 82, 144, 172, 159, 255, 249, 149, 141, 236, 84, 255, 255, 252, 56, 86, 64, 163, 6, 66, 144, 184, 11, 63, 255, 132, 149, 0, 133, 136, 0, 0, 201, 236, 99, 49, 156, 133, 190, 113, 203, 250, 152, 47, 43, 74, 107, 172, 22, 146, 84, 237, 51, 167, 41, 202, 119, 141, 255, 251, 146, 100, 15, 128, 243, 93, 47, 204, 95, 97, 0, 0, 0, 0, 13, 32, 224, 0, 1, 16, 237, 154, 248, 199, 160, 207, 200, 0, 0, 52, 128, 0, 0, 4, 14, 128, 88, 5, 131, 225, 228, 130, 144, 21, 15, 156, 84, 26, 135, 166, 192, 176, 177, 181, 237, 114, 72, 171, 126, 171, 95, 202, 175, 12, 205, 179, 54, 164, 154, 173, 202, 236, 80, 176, 178, 236, 222, 164, 174, 164, 138, 138, 132, 129, 161, 129, 208, 213, 186, 129, 163, 185, 83, 191, 255, 229, 143, 127, 250, 148, 120, 21, 112, 152, 26, 6, 129, 168, 42, 160, 232, 4, 193, 2, 91, 53, 11, 114, 109, 151, 225, 181, 67, 27, 50, 70, 97, 139, 224, 178, 229, 28, 217, 34, 170, 28, 143, 21, 134, 181, 144, 228, 219, 37, 5, 155, 92, 86, 253, 156, 218, 105, 40, 127, 34, 180, 220, 10, 215, 170, 236, 208, 80, 177, 215, 42, 28, 130, 212, 156, 210, 57, 95, 243, 81, 121, 56, 43, 94, 75, 0, 132, 201, 193, 70, 163, 53, 85, 255, 215, 151, 101, 206, 87, 58, 141, 71, 145, 69, 181, 143, 6, 74, 102, 44, 142, 61, 60, 87, 118, 52, 3, 85, 64, 201, 76, 28, 189, 35, 255, 255, 252, 217, 207, 68, 181, 157, 16, 107, 206, 106, 51, 190, 100, 139, 56, 40, 75, 250, 54, 9, 22, 132, 17, 231, 66, 42, 45, 81, 216, 198, 84, 185, 68, 130, 33, 32, 161, 50, 29, 157, 159, 234, 138, 159, 245, 179, 255, 86, 148, 141, 102, 82, 88, 100, 124, 180, 153, 101, 150, 75, 28, 141, 67, 5, 6, 134, 95, 178, 212, 53, 106, 134, 89, 171, 88, 242, 216, 100, 215, 253, 150, 84, 50, 255, 254, 43, 37, 117, 127, 213, 210, 87, 9, 227, 72, 72, 138, 157, 81, 182, 31, 146, 141, 85, 251, 171, 205, 255, 99, 36, 234, 117, 105, 169, 55, 52, 202, 34, 17, 163, 136, 220, 209, 37, 138, 42, 76, 65, 77, 69, 51, 46, 57, 57, 46, 53, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 255, 251, 146, 100, 85, 15, 243, 33, 101, 49, 128, 163, 78, 82, 0, 0, 13, 32, 0, 0, 1, 0, 0, 1, 164, 0, 0, 0, 32, 0, 0, 52, 128, 0, 0, 4, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 84, 65, 71, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 48, 48, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 148 )
+loop = true
+
+[node name="bossCangaceiro" type="Node2D"]
+script = ExtResource( 20 )
+
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 225, 162 )
+scale = Vector2( 3.5, 3.5 )
+texture = ExtResource( 9 )
+
+[node name="boss" type="StaticBody2D" parent="."]
+position = Vector2( -3, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="boss" type="AnimatedSprite" parent="boss"]
+position = Vector2( 298, 116 )
+scale = Vector2( 2.5, 2.5 )
+frames = SubResource( 7 )
+animation = "idle"
+frame = 2
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="boss"]
+position = Vector2( 318, 121 )
+shape = SubResource( 14 )
+
+[node name="fundo" type="Sprite" parent="."]
+position = Vector2( 256, 150 )
+texture = ExtResource( 7 )
+
+[node name="s_instrucao1" type="Sprite" parent="fundo"]
+position = Vector2( 190, -110.5 )
+scale = Vector2( 1.1905, 1 )
+texture = ExtResource( 12 )
+
+[node name="borda_instrucao1" type="Sprite" parent="fundo"]
+visible = false
+position = Vector2( 190.15, -110 )
+scale = Vector2( 1.18797, 1 )
+texture = ExtResource( 6 )
+
+[node name="s_instrucao2" type="Sprite" parent="fundo"]
+position = Vector2( 190, -37 )
+scale = Vector2( 1.1905, 1 )
+texture = ExtResource( 12 )
+
+[node name="borda_instrucao2" type="Sprite" parent="fundo"]
+visible = false
+position = Vector2( 190.15, -37 )
+scale = Vector2( 1.18797, 1 )
+texture = ExtResource( 6 )
+
+[node name="s_instrucao3" type="Sprite" parent="fundo"]
+position = Vector2( 190, 36 )
+scale = Vector2( 1.1905, 1 )
+texture = ExtResource( 12 )
+
+[node name="borda_instrucao3" type="Sprite" parent="fundo"]
+visible = false
+position = Vector2( 190.15, 36 )
+scale = Vector2( 1.18797, 1 )
+texture = ExtResource( 6 )
+
+[node name="dash" parent="." instance=ExtResource( 19 )]
+
+[node name="cartas" type="Node" parent="."]
+script = ExtResource( 15 )
+
+[node name="carta0" type="TextureButton" parent="cartas"]
+margin_left = 17.0
+margin_top = 193.0
+margin_right = 49.0
+margin_bottom = 235.0
+rect_scale = Vector2( 2.1, 2.1 )
+texture_normal = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="numero" type="Label" parent="cartas/carta0"]
+margin_right = 32.0
+margin_bottom = 42.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+align = 1
+valign = 1
+
+[node name="carta1" type="TextureButton" parent="cartas"]
+margin_left = 89.0
+margin_top = 193.0
+margin_right = 121.0
+margin_bottom = 235.0
+rect_scale = Vector2( 2.1, 2.1 )
+texture_normal = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="numero" type="Label" parent="cartas/carta1"]
+margin_right = 32.0
+margin_bottom = 42.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+align = 1
+valign = 1
+
+[node name="carta2" type="TextureButton" parent="cartas"]
+margin_left = 160.0
+margin_top = 193.0
+margin_right = 192.0
+margin_bottom = 235.0
+rect_scale = Vector2( 2.1, 2.1 )
+texture_normal = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="numero" type="Label" parent="cartas/carta2"]
+margin_right = 32.0
+margin_bottom = 42.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+align = 1
+valign = 1
+
+[node name="carta3" type="TextureButton" parent="cartas"]
+margin_left = 231.0
+margin_top = 193.0
+margin_right = 263.0
+margin_bottom = 235.0
+rect_scale = Vector2( 2.1, 2.1 )
+texture_normal = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="numero" type="Label" parent="cartas/carta3"]
+margin_right = 32.0
+margin_bottom = 42.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+align = 1
+valign = 1
+
+[node name="carta4" type="TextureButton" parent="cartas"]
+margin_left = 303.0
+margin_top = 193.0
+margin_right = 335.0
+margin_bottom = 235.0
+rect_scale = Vector2( 2.1, 2.1 )
+texture_normal = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="numero" type="Label" parent="cartas/carta4"]
+margin_right = 32.0
+margin_bottom = 42.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+align = 1
+valign = 1
+
+[node name="instrucoes" type="Node" parent="."]
+script = ExtResource( 17 )
+
+[node name="instrucao1" type="Label" parent="instrucoes"]
+margin_left = 384.0
+margin_top = 9.0
+margin_right = 508.0
+margin_bottom = 71.0
+custom_fonts/font = SubResource( 2 )
+align = 1
+valign = 1
+
+[node name="instrucao2" type="Label" parent="instrucoes"]
+margin_left = 384.0
+margin_top = 82.0
+margin_right = 508.0
+margin_bottom = 144.0
+custom_fonts/font = SubResource( 2 )
+align = 1
+valign = 1
+
+[node name="instrucao3" type="Label" parent="instrucoes"]
+margin_left = 384.0
+margin_top = 155.0
+margin_right = 508.0
+margin_bottom = 217.0
+custom_fonts/font = SubResource( 2 )
+align = 1
+valign = 1
+
+[node name="botoes" type="Node" parent="."]
+
+[node name="botao_pronto" type="TextureButton" parent="botoes"]
+margin_left = 384.0
+margin_top = 224.0
+margin_right = 424.0
+margin_bottom = 264.0
+rect_scale = Vector2( 1.75, 1.75 )
+texture_normal = ExtResource( 11 )
+
+[node name="botao_lixeira" type="TextureButton" parent="botoes"]
+margin_left = 451.0
+margin_top = 229.0
+margin_right = 491.0
+margin_bottom = 269.0
+rect_scale = Vector2( 1.5, 1.5 )
+texture_normal = ExtResource( 8 )
+
+[node name="botaoVoltaMenu" parent="botoes" instance=ExtResource( 2 )]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 21.0
+margin_bottom = 21.0
+rect_scale = Vector2( 2, 2 )
+
+[node name="botao_olho" type="TextureButton" parent="botoes"]
+modulate = Color( 0, 1, 0, 1 )
+margin_left = 343.0
+margin_top = 129.0
+margin_right = 384.0
+margin_bottom = 171.0
+texture_normal = ExtResource( 18 )
+
+[node name="pisos" type="Node" parent="."]
+
+[node name="piso_esquerda" type="Area2D" parent="pisos"]
+position = Vector2( 48, 170 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="pisos/piso_esquerda"]
+scale = Vector2( 6, 5 )
+texture = ExtResource( 13 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pisos/piso_esquerda"]
+position = Vector2( 0.5, -69.75 )
+shape = SubResource( 8 )
+
+[node name="piso_centro" type="Area2D" parent="pisos"]
+position = Vector2( 103, 170 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="pisos/piso_centro"]
+scale = Vector2( 6, 5 )
+texture = ExtResource( 13 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pisos/piso_centro"]
+position = Vector2( 3, -69.75 )
+shape = SubResource( 8 )
+
+[node name="piso_direita" type="Area2D" parent="pisos"]
+position = Vector2( 161, 170 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="pisos/piso_direita"]
+scale = Vector2( 6, 5 )
+texture = ExtResource( 13 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pisos/piso_direita"]
+position = Vector2( 0.5, -69.75 )
+shape = SubResource( 8 )
+
+[node name="piso_cima_esquerda" type="Area2D" parent="pisos"]
+position = Vector2( 48, 107 )
+scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="pisos/piso_cima_esquerda"]
+scale = Vector2( 6, 5 )
+texture = ExtResource( 14 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pisos/piso_cima_esquerda"]
+position = Vector2( 0.5, -51.75 )
+shape = SubResource( 8 )
+
+[node name="piso_cima_centro" type="Area2D" parent="pisos"]
+position = Vector2( 103, 107 )
+scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="pisos/piso_cima_centro"]
+scale = Vector2( 6, 5 )
+texture = ExtResource( 14 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pisos/piso_cima_centro"]
+position = Vector2( 3, -51.75 )
+shape = SubResource( 8 )
+
+[node name="piso_cima_direita" type="Area2D" parent="pisos"]
+position = Vector2( 161, 107 )
+scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="pisos/piso_cima_direita"]
+scale = Vector2( 6, 5 )
+texture = ExtResource( 14 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pisos/piso_cima_direita"]
+position = Vector2( 0.5, -51.75 )
+shape = SubResource( 8 )
+
+[node name="mensagens" type="Node" parent="."]
+
+[node name="mensagem_vitoria" parent="mensagens" instance=ExtResource( 3 )]
+visible = false
+nivelRestart = "res://niveis/cordel1/bossC/bossCangaceiro.tscn"
+nivelProximo = "res://niveis/cordel2/c2_nivel1/c2_nivel1.tscn"
+
+[node name="mensagem_derrota" parent="mensagens" instance=ExtResource( 1 )]
+visible = false
+nivelRestart = "res://niveis/cordel1/bossC/bossCangaceiro.tscn"
+voltaMenu = "res://menu/menu.tscn"
+
+[node name="colisoes" type="Node" parent="."]
+
+[node name="colisao_cima" type="StaticBody2D" parent="colisoes"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colisoes/colisao_cima"]
+position = Vector2( 108, 4 )
+shape = SubResource( 10 )
+
+[node name="colisao_baixo" type="StaticBody2D" parent="colisoes"]
+position = Vector2( 24, 272 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colisoes/colisao_baixo"]
+position = Vector2( 83, 0 )
+shape = SubResource( 11 )
+
+[node name="colisao_esquerda" type="StaticBody2D" parent="colisoes"]
+position = Vector2( 9, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colisoes/colisao_esquerda"]
+position = Vector2( 0, 59 )
+shape = SubResource( 12 )
+
+[node name="Dash" parent="." instance=ExtResource( 19 )]
+
+[node name="jogador" parent="." instance=ExtResource( 16 )]
+
+[node name="estagio" parent="." instance=ExtResource( 21 )]
+margin_left = 244.0
+margin_right = 376.0
+
+[node name="pergunta" type="Label" parent="."]
+margin_left = 40.0
+margin_top = 23.0
+margin_right = 168.0
+margin_bottom = 48.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 21 )
+align = 1
+valign = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 256, 151 )
+current = true
+
+[node name="sons" type="Node" parent="."]
+
+[node name="dash_som" type="AudioStreamPlayer" parent="sons"]
+stream = ExtResource( 22 )
+
+[node name="dano_som" type="AudioStreamPlayer" parent="sons"]
+stream = SubResource( 22 )
+
+[connection signal="pressed" from="cartas/carta0" to="cartas" method="_on_carta1_pressed"]
+[connection signal="pressed" from="cartas/carta0" to="instrucoes" method="_on_carta1_pressed"]
+[connection signal="pressed" from="cartas/carta1" to="cartas" method="_on_carta2_pressed"]
+[connection signal="pressed" from="cartas/carta1" to="instrucoes" method="_on_carta2_pressed"]
+[connection signal="pressed" from="cartas/carta2" to="cartas" method="_on_carta3_pressed"]
+[connection signal="pressed" from="cartas/carta2" to="instrucoes" method="_on_carta3_pressed"]
+[connection signal="pressed" from="cartas/carta3" to="cartas" method="_on_carta4_pressed"]
+[connection signal="pressed" from="cartas/carta3" to="instrucoes" method="_on_carta4_pressed"]
+[connection signal="pressed" from="cartas/carta4" to="cartas" method="_on_carta5_pressed"]
+[connection signal="pressed" from="cartas/carta4" to="instrucoes" method="_on_carta5_pressed"]
+[connection signal="pressed" from="botoes/botao_pronto" to="." method="_on_botao_pronto_pressed"]
+[connection signal="pressed" from="botoes/botao_pronto" to="cartas" method="_on_botao_pronto_pressed"]
+[connection signal="pressed" from="botoes/botao_lixeira" to="cartas" method="_on_botao_lixeira_pressed"]
+[connection signal="pressed" from="botoes/botao_lixeira" to="instrucoes" method="_on_botao_lixeira_pressed"]
+[connection signal="pressed" from="botoes/botao_olho" to="." method="_on_botao_olho_pressed"]

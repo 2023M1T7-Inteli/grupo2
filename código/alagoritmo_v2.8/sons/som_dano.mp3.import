@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/som_dano.mp3-51baab48e72b79c76692128862023c96.mp3str"
+
+[deps]
+
+source_file="res://sons/som_dano.mp3"
+dest_files=[ "res://.import/som_dano.mp3-51baab48e72b79c76692128862023c96.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
