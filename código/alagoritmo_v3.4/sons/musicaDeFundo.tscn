@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://sons/musicaDeFundo.mp3" type="AudioStream" id=1]
+[ext_resource path="res://sons/musicaDeFundo.gd" type="Script" id=2]
+
+[node name="musicaDeFundo" type="AudioStreamPlayer"]
+stream = ExtResource( 1 )
+volume_db = -15.0
+script = ExtResource( 2 )
