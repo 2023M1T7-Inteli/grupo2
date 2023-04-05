@@ -83,6 +83,19 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 
 ## 🗃 Histórico de lançamentos
 
+* 3.3.0 - 05/04/2023
+    * Versão 3.3.0 do alagoritmo upada para o Github.
+    * CORRIGIDO: Bug da tela de derrota aparecer no estágio 5 do boss final mesmo o jogador vencendo o jogo.
+    * ADD: Cutscenes foram adicionadas ao jogo para dar maior contextualização sobre a história.
+    * ADD: Sons foram adicionados ao jogo: Som de dano, vitória, apertar das cartas, música de fundo e etc.
+    * ADD: Tela de configurações e de informações adicionadas ao jogo.
+    * ADD: Diálogos inseridos dentro do jogo.
+    * ADD: Tela final de créditos adicionada quando o jogador vence o jogo.
+    * ADD: Tela inicial alterada para a logo do jogo aparecendo enquanto ele carrega.
+    * ADD: Transição entre troca de cenas.
+* 2.8.1 - 01/04/2023
+    * Versão 2.8.1 do alagoritmo upada para o Github.
+    * CORRIGIDO: Bug das fases não estarem passando após fazer as contas.
 * 2.8.0 - 30/03/2023
     * Versão 2.8 do alagoritmo upada para o Github.
     * CORRIGIDO: Bug nas posições entre os estágios da fase do Lume (boss final) e do cangaceiro.
