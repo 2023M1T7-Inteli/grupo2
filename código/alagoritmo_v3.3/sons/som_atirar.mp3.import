@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/som_atirar.mp3-21ce8132a020dd4a80824bcf138870ed.mp3str"
+
+[deps]
+
+source_file="res://sons/som_atirar.mp3"
+dest_files=[ "res://.import/som_atirar.mp3-21ce8132a020dd4a80824bcf138870ed.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

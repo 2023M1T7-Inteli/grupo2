@@ -1,0 +1,91 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://menu/nuvem.gd" type="Script" id=1]
+[ext_resource path="res://menu/informacoes/historia/Tela_historia.gd" type="Script" id=2]
+[ext_resource path="res://assets/Retro Gaming.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/botao_volta.png" type="Texture" id=4]
+[ext_resource path="res://assets/cenario_farol_de_ponta_verde.png" type="Texture" id=5]
+[ext_resource path="res://assets/nuvenzinha.png" type="Texture" id=6]
+[ext_resource path="res://assets/background.png" type="Texture" id=7]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 12.8
+height = 1.52588e-05
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 3 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Fundo_azul" type="Sprite" parent="."]
+position = Vector2( 257, 150 )
+scale = Vector2( 2.1, 2 )
+texture = ExtResource( 7 )
+
+[node name="nuvem" type="KinematicBody2D" parent="."]
+position = Vector2( 12, 73 )
+scale = Vector2( 2.5, 2.5 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="nuvem"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="nuvem"]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 256, 143 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 5 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 6.0
+margin_top = 40.0
+margin_right = 446.0
+margin_bottom = 488.0
+rect_rotation = -89.8
+rect_scale = Vector2( 0.086, 0.106 )
+texture_normal = ExtResource( 4 )
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 57.0
+margin_top = 47.0
+margin_right = 500.0
+margin_bottom = 303.0
+rect_scale = Vector2( 1.005, 1.213 )
+rect_pivot_offset = Vector2( 223, 241 )
+color = Color( 0.415686, 0.643137, 0.933333, 0.913725 )
+
+[node name="Label6" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 58.0
+margin_top = 67.0
+margin_right = 855.0
+margin_bottom = 208.0
+rect_scale = Vector2( 0.549347, 1.41769 )
+custom_fonts/font = SubResource( 2 )
+text = "Em uma noite, Aluado, uma criança muito interessada pela cultura de sua região, 
+passa horas lendo suas literaturas de cordel preferidas. De repente, Aluado
+ cai no sono e, quando abre seus olhos, ele se depara com um mundo descolorido
+ tal qual os folhetos que ele tanto gostava de ler. Ele estava dentro de um 
+cordel! Aluado deverá passar por uma série de aventuras e desafios para 
+resolver os problemas daquele mundo e voltar para sua casa."
+
+[node name="Label7" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 174.0
+margin_top = 7.0
+margin_right = 342.0
+margin_bottom = 28.0
+rect_scale = Vector2( 1.333, 1.234 )
+custom_fonts/font = SubResource( 2 )
+text = "SINOPSE DO JOGO"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]

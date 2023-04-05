@@ -1,0 +1,108 @@
+[gd_scene load_steps=67 format=2]
+
+[ext_resource path="res://assets/espaco_instrucoes.png" type="Texture" id=1]
+[ext_resource path="res://assets/plataforma.png" type="Texture" id=2]
+[ext_resource path="res://assets/botao_lixeira.png" type="Texture" id=3]
+[ext_resource path="res://assets/cenario_instrucoes.png" type="Texture" id=4]
+[ext_resource path="res://assets/cenario_batalha.png" type="Texture" id=5]
+[ext_resource path="res://assets/placa.png" type="Texture" id=6]
+[ext_resource path="res://assets/instrucoes_borda.png" type="Texture" id=7]
+[ext_resource path="res://assets/botao_play.png" type="Texture" id=8]
+[ext_resource path="res://assets/base_cartas.png" type="Texture" id=9]
+[ext_resource path="res://cenas_universais/mensagem_derrota.tscn" type="PackedScene" id=10]
+[ext_resource path="res://cenas_universais/mensagem_vitoria.tscn" type="PackedScene" id=11]
+[ext_resource path="res://cenas_universais/Dash/dash.tscn" type="PackedScene" id=12]
+[ext_resource path="res://cenas_universais/botaoVoltaMenu.tscn" type="PackedScene" id=13]
+[ext_resource path="res://cenas_universais/jogador.tscn" type="PackedScene" id=14]
+[ext_resource path="res://assets/Retro Gaming.ttf" type="DynamicFontData" id=15]
+[ext_resource path="res://niveis/cordel2/c2_nivel1/cartas_c2_nivel2.gd" type="Script" id=16]
+[ext_resource path="res://assets/mao_apontando.png" type="Texture" id=17]
+[ext_resource path="res://niveis/cordel2/c2_nivel1/c2_nivel1_instrucoes.gd" type="Script" id=18]
+[ext_resource path="res://niveis/cordel2/c2_nivel1/c2_nivel1.gd" type="Script" id=19]
+[ext_resource path="res://sons/cliqueCarta.mp3" type="AudioStream" id=20]
+[ext_resource path="res://sons/somPerdeu.mp3" type="AudioStream" id=21]
+[ext_resource path="res://sons/som_dash.wav" type="AudioStream" id=22]
+[ext_resource path="res://sons/passouDoEstagio.wav" type="AudioStream" id=23]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 39, 38.25 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 45
+font_data = ExtResource( 15 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 14
+font_data = ExtResource( 15 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 17 )
+region = Rect2( 0, 0, 227, 200 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 17 )
+region = Rect2( 227, 0, 227, 200 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 17 )
+region = Rect2( 0, 200, 227, 200 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 17 )
+region = Rect2( 227, 200, 227, 200 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 17 )
+region = Rect2( 0, 400, 227, 200 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 17 )
+region = Rect2( 227, 400, 227, 200 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 17 )
+region = Rect2( 0, 600, 227, 200 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 17 )
+region = Rect2( 227, 600, 227, 200 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 17 )
+region = Rect2( 0, 800, 227, 200 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 17 )
+region = Rect2( 227, 800, 227, 200 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 17 )
+region = Rect2( 0, 1000, 227, 200 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 17 )
+region = Rect2( 227, 1000, 227, 200 )
+
+[sub_resource type="SpriteFrames" id=53]
+animations = [ {
+"frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 17 )
+region = Rect2( 0, 0, 227, 200 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 17 )
+region = Rect2( 227, 0, 227, 200 )
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 17 )
+region = Rect2( 0, 200, 227, 200 )
+
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 17 )
+region = Rect2( 227, 200, 227,

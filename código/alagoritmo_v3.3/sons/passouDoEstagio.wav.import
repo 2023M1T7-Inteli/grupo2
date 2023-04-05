@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/passouDoEstagio.wav-7045112f0d1f60504a755abf592fbbeb.sample"
+
+[deps]
+
+source_file="res://sons/passouDoEstagio.wav"
+dest_files=[ "res://.import/passouDoEstagio.wav-7045112f0d1f60504a755abf592fbbeb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
