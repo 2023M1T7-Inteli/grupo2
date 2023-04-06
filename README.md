@@ -8,7 +8,8 @@
 
 ## all_4_one
 
-## Integrantes: <a href="https://www.linkedin.com/in/ana-carolina-cremonezi-martire-2a7335268">Ana "Kakau" Martire</a>, Cecília Gonçalves, Felipe Braga, Felipe Spina, Lucas de Luccas, <a href="https://www.linkedin.com/in/mauro-das-chagas-junior-7306a71b9/">Mauro das Chagas</a>, <a href="https://www.linkedin.com/in/renan-feitosa-44328524a">Renan Feitosa</a>, Ricardo Novaes
+## Integrantes: 
+<a href="https://www.linkedin.com/in/ana-carolina-cremonezi-martire-2a7335268">Ana "Kakau" Martire</a>, <a href="https://www.linkedin.com/in/cec%C3%ADlia-alonso-gon%C3%A7alves-3aa4bb271/">Cecília Gonçalves</a>, <a href="https://www.linkedin.com/in/felipe-braga-69607126a/">Felipe Braga</a>, <a href="https://www.linkedin.com/in/felipe-sabino-spina-b33372271/">Felipe Spina</a>, <a href="https://www.linkedin.com/in/lucasdeluccas/">Lucas de Luccas</a>, <a href="https://www.linkedin.com/in/mauro-das-chagas-junior-7306a71b9/">Mauro das Chagas</a>, <a href="https://www.linkedin.com/in/renan-feitosa-44328524a">Renan Feitosa</a>, Ricardo Novaes
 
 ## Descrição
 
@@ -173,3 +174,4 @@ Aqui estão as referências usadas no projeto.
 1. <https://laart.art.br/blog/cordeis-famosos/>
 2. <http://www.ablc.com.br/o-cordel/cordeis-digitalizados/>
 3. Créditos da música de fundo: <https://www.youtube.com/@Eki_Ms>
+4. Arquivo de referências: <https://docs.google.com/document/d/1EEntEbpoMxJFLGPAsPr16n96g_bd3Fmm1Wt_mVEWNkQ/edit>
