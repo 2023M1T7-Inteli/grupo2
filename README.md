@@ -56,16 +56,6 @@ Há também 4 pastas que seguem da seguinte forma:
 
 ## 🛠 Instalação
 
-<b>Android:</b>
-
-Faça o Download do JOGO.apk no seu celular.
-Execute o APK e siga as instruções de seu telefone.
-
-<b>Windows:</b>
-
-Não há instalação! Apenas executável!
-Encontre o JOGO.exe na pasta executáveis e execute-o como qualquer outro programa.
-
 <b>HTML:</b>
 
 Não há instalação!
@@ -83,6 +73,10 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 
 ## 🗃 Histórico de lançamentos
 
+* 3.4.0 - 05/04/2023
+    * Versão 3.4.0 do alagoritmo upada para o Github.
+    * CORRIGIDO: Mudanças nos arquivos de áudio e otimização do jogo.
+        * Correção necessária devido o arquivo da 3.3 ter ficado extremamente grande sem nenhuma necessidade.
 * 3.3.0 - 05/04/2023
     * Versão 3.3.0 do alagoritmo upada para o Github.
     * CORRIGIDO: Bug da tela de derrota aparecer no estágio 5 do boss final mesmo o jogador vencendo o jogo.
@@ -178,3 +172,4 @@ Aqui estão as referências usadas no projeto.
 
 1. <https://laart.art.br/blog/cordeis-famosos/>
 2. <http://www.ablc.com.br/o-cordel/cordeis-digitalizados/>
+3. Créditos da música de fundo: <https://www.youtube.com/@Eki_Ms>
