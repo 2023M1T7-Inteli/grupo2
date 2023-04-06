@@ -8,8 +8,7 @@
 
 ## all_4_one
 
-## Integrantes: 
-<a href="https://www.linkedin.com/in/ana-carolina-cremonezi-martire-2a7335268">Ana "Kakau" Martire</a>, <a href="https://www.linkedin.com/in/cec%C3%ADlia-alonso-gon%C3%A7alves-3aa4bb271/">Cecília Gonçalves</a>, <a href="https://www.linkedin.com/in/felipe-braga-69607126a/">Felipe Braga</a>, <a href="https://www.linkedin.com/in/felipe-sabino-spina-b33372271/">Felipe Spina</a>, <a href="https://www.linkedin.com/in/lucasdeluccas/">Lucas de Luccas</a>, <a href="https://www.linkedin.com/in/mauro-das-chagas-junior-7306a71b9/">Mauro das Chagas</a>, <a href="https://www.linkedin.com/in/renan-feitosa-44328524a">Renan Feitosa</a>, Ricardo Novaes
+## Integrantes: <a href="https://www.linkedin.com/in/ana-carolina-cremonezi-martire-2a7335268">Ana "Kakau" Martire</a>, <a href="https://www.linkedin.com/in/cec%C3%ADlia-alonso-gon%C3%A7alves-3aa4bb271/">Cecília Gonçalves</a>, <a href="https://www.linkedin.com/in/felipe-braga-69607126a/">Felipe Braga</a>, <a href="https://www.linkedin.com/in/felipe-sabino-spina-b33372271/">Felipe Spina</a>, <a href="https://www.linkedin.com/in/lucasdeluccas/">Lucas de Luccas</a>, <a href="https://www.linkedin.com/in/mauro-das-chagas-junior-7306a71b9/">Mauro das Chagas</a>, <a href="https://www.linkedin.com/in/renan-feitosa-44328524a">Renan Feitosa</a>, Ricardo Novaes
 
 ## Descrição
 
