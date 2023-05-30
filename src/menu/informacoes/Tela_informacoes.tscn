@@ -1,0 +1,183 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://menu/nuvem.gd" type="Script" id=1]
+[ext_resource path="res://menu/informacoes/Tela_informacoes.gd" type="Script" id=2]
+[ext_resource path="res://assets/Retro Gaming.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/botao_volta.png" type="Texture" id=4]
+[ext_resource path="res://assets/base_cartas.png" type="Texture" id=5]
+[ext_resource path="res://assets/cenario_farol_de_ponta_verde.png" type="Texture" id=6]
+[ext_resource path="res://assets/nuvenzinha.png" type="Texture" id=7]
+[ext_resource path="res://assets/background.png" type="Texture" id=8]
+
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 12.8
+height = 1.52588e-05
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 3 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Fundo_azul" type="Sprite" parent="."]
+position = Vector2( 255.5, 157.5 )
+scale = Vector2( 2.1, 2 )
+texture = ExtResource( 8 )
+
+[node name="nuvem" type="KinematicBody2D" parent="."]
+position = Vector2( 12, 73 )
+scale = Vector2( 2.5, 2.5 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="nuvem"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="nuvem"]
+shape = SubResource( 4 )
+
+[node name="Fundo_menu" type="Sprite" parent="."]
+position = Vector2( 256, 143 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 57.0
+margin_top = 47.0
+margin_right = 477.0
+margin_bottom = 303.0
+rect_scale = Vector2( 1.00549, 1.21291 )
+rect_pivot_offset = Vector2( 223, 241 )
+color = Color( 0.415686, 0.643137, 0.933333, 0.913725 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 257, 66 )
+rotation = -1.57366
+scale = Vector2( 1.71511, 3.42482 )
+texture = ExtResource( 5 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 256, 129 )
+rotation = -1.57366
+scale = Vector2( 1.71511, 3.42482 )
+texture = ExtResource( 5 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 256, 195 )
+rotation = -1.57366
+scale = Vector2( 1.71511, 3.42482 )
+texture = ExtResource( 5 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( 256, 262 )
+rotation = -1.57366
+scale = Vector2( 1.71511, 3.42482 )
+texture = ExtResource( 5 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 6.0
+margin_top = 40.0
+margin_right = 446.0
+margin_bottom = 488.0
+rect_rotation = -89.8
+rect_scale = Vector2( 0.086, 0.106 )
+texture_normal = ExtResource( 4 )
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+modulate = Color( 0.345098, 0.705882, 0.843137, 0.729412 )
+margin_left = 184.0
+margin_top = 35.0
+margin_right = 278.0
+margin_bottom = 115.0
+rect_scale = Vector2( 1.54301, 0.747192 )
+
+[node name="TextureButton3" type="TextureButton" parent="."]
+modulate = Color( 0.345098, 0.705882, 0.843137, 0.729412 )
+margin_left = 183.0
+margin_top = 101.0
+margin_right = 276.0
+margin_bottom = 184.0
+rect_scale = Vector2( 1.54244, 0.667091 )
+
+[node name="TextureButton4" type="TextureButton" parent="."]
+modulate = Color( 0.345098, 0.705882, 0.843137, 0.729412 )
+margin_left = 185.0
+margin_top = 233.0
+margin_right = 279.0
+margin_bottom = 316.0
+rect_scale = Vector2( 1.54525, 0.710489 )
+
+[node name="TextureButton5" type="TextureButton" parent="."]
+modulate = Color( 0.345098, 0.705882, 0.843137, 0.729412 )
+margin_left = 185.0
+margin_top = 167.0
+margin_right = 278.0
+margin_bottom = 251.0
+rect_scale = Vector2( 1.54244, 0.667091 )
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 224.0
+margin_top = 56.0
+margin_right = 296.0
+margin_bottom = 77.0
+rect_scale = Vector2( 0.817692, 0.897318 )
+custom_fonts/font = SubResource( 1 )
+text = "CARTAS"
+
+[node name="Label2" type="Label" parent="."]
+modulate = Color( 0.0235294, 0.0156863, 0, 1 )
+margin_left = 207.0
+margin_top = 119.0
+margin_right = 329.0
+margin_bottom = 140.0
+rect_scale = Vector2( 0.796916, 0.874944 )
+custom_fonts/font = SubResource( 2 )
+text = "INSTRUÇÕES"
+
+[node name="Label3" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 218.0
+margin_top = 253.0
+margin_right = 313.0
+margin_bottom = 274.0
+rect_scale = Vector2( 0.776077, 0.784333 )
+custom_fonts/font = SubResource( 3 )
+text = "CRÉDITOS"
+
+[node name="Label4" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 217.0
+margin_top = 186.0
+margin_right = 317.0
+margin_bottom = 207.0
+rect_scale = Vector2( 0.806952, 0.848597 )
+custom_fonts/font = SubResource( 2 )
+text = "HISTÓRIA"
+
+[node name="Label5" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 174.0
+margin_top = 7.0
+margin_right = 307.0
+margin_bottom = 28.0
+rect_scale = Vector2( 1.33272, 1.23431 )
+custom_fonts/font = SubResource( 1 )
+text = "INFORMAÇÕES"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_TextureButton2_pressed"]
+[connection signal="pressed" from="TextureButton3" to="." method="_on_TextureButton3_pressed"]
+[connection signal="pressed" from="TextureButton4" to="." method="_on_TextureButton4_pressed"]
+[connection signal="pressed" from="TextureButton5" to="." method="_on_TextureButton5_pressed"]

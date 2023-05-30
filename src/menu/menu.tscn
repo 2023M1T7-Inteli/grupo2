@@ -1,0 +1,112 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://menu/menu.gd" type="Script" id=1]
+[ext_resource path="res://assets/Retro Gaming.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/botao_start.png" type="Texture" id=3]
+[ext_resource path="res://assets/botao_info.png" type="Texture" id=4]
+[ext_resource path="res://assets/botao_config.png" type="Texture" id=5]
+[ext_resource path="res://assets/nuvenzinha.png" type="Texture" id=6]
+[ext_resource path="res://assets/cenario_farol_de_ponta_verde.png" type="Texture" id=7]
+[ext_resource path="res://cutscenes/transicao.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/background.png" type="Texture" id=9]
+[ext_resource path="res://menu/nuvem.gd" type="Script" id=10]
+[ext_resource path="res://sons/cliqueCarta.mp3" type="AudioStream" id=12]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 12.8
+height = 1.52588e-05
+
+[sub_resource type="DynamicFont" id=1]
+size = 80
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 24
+font_data = ExtResource( 2 )
+
+[node name="menu" type="Control"]
+script = ExtResource( 1 )
+tipo_transicao = 2
+
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 256, 157 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 9 )
+
+[node name="nuvem" type="KinematicBody2D" parent="."]
+position = Vector2( 64, 72 )
+scale = Vector2( 2.5, 2.5 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="nuvem"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="nuvem"]
+shape = SubResource( 2 )
+
+[node name="fundo_menu" type="Sprite" parent="."]
+position = Vector2( 256, 143 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 7 )
+
+[node name="alagoritmo" type="Label" parent="."]
+margin_left = 216.0
+margin_top = 16.0
+margin_right = 748.0
+margin_bottom = 118.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 1 )
+text = "Alagoritmo"
+
+[node name="botoes" type="CanvasLayer" parent="."]
+
+[node name="play" type="TextureButton" parent="botoes"]
+margin_left = 384.0
+margin_top = 64.0
+margin_right = 464.0
+margin_bottom = 104.0
+rect_scale = Vector2( 1.25, 1.25 )
+texture_normal = ExtResource( 3 )
+
+[node name="config" type="TextureButton" parent="botoes"]
+margin_left = 384.0
+margin_top = 120.0
+margin_right = 464.0
+margin_bottom = 160.0
+rect_scale = Vector2( 1.25, 1.25 )
+texture_normal = ExtResource( 5 )
+
+[node name="info" type="TextureButton" parent="botoes"]
+margin_left = 384.0
+margin_top = 176.0
+margin_right = 464.0
+margin_bottom = 216.0
+rect_scale = Vector2( 1.25, 1.25 )
+texture_normal = ExtResource( 4 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 256, 137 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 418.0
+margin_top = 272.0
+margin_right = 506.0
+margin_bottom = 303.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "v3.4.0"
+
+[node name="transicao" parent="." instance=ExtResource( 8 )]
+
+[node name="sons" type="Node" parent="."]
+
+[node name="cliqueCarta_som" type="AudioStreamPlayer" parent="sons"]
+stream = ExtResource( 12 )
+
+[connection signal="pressed" from="botoes/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="botoes/config" to="." method="_on_config_pressed"]
+[connection signal="pressed" from="botoes/info" to="." method="_on_info_pressed"]
