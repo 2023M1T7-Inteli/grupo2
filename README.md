@@ -15,9 +15,6 @@
 Alagoritmo é um jogo educativo focado no ensino de matemática e pensamento computacional para crianças do ensino público de Alagoas. Com um design simples e marcado pela cultura Alagoana, Alagoritmo visa tornar o aprendizado mais dinâmico e de fácil identificação, assim contornando dificuldades e democratizando o acesso ao aprendizado de computação.
 <br><br>
 
-<div align="center">
-<img src="https://user-images.githubusercontent.com/123962654/227363176-26ffccce-a443-4113-8388-9cc41950fc80.jpg" width="1200px" />
-</div>
 <br><br>
 
 Alagoritmo visa ensinar o pensamento computacional e matemática para crianças do ensino básico de Alagoas de forma lúdica e dinâmica, para isso ele foi estruturado como um RPG de turnos no qual o jogador precisa passar pelas 4 fases do pensamento computacional: Reconhecimento de padrões, decomposição, abstração e algoritmo. Em um primeiro momento, a criança terá a oportunidade de ver a movimentação/acontecimentos de uma fase, a partir disso é esperado que ela desenvolva seu reconhecimento de padrões. Após isso, ela terá que decompor esses padrões em partes menores para que assim possa abstrair a situação e gerar um algoritmo que solucione o problema que está sendo proposto pelo jogo. Por meio dessa sequência de ações, esperamos que a criança consiga desenvolver suas habilidades computacionais e de matemática de forma lúdica e dinâmica.
