@@ -42,7 +42,8 @@ A pasta raiz contem dois arquivos que devem ser alterados:
 
 Há também 4 pastas que seguem da seguinte forma:
 
-<b>docs</b>: Aqui serão colocados os arquivos compilados em HTML do jogo.<br>
+<b>docs</b>: Aqui serão colocados os arquivos compilados em HTML do jogo.
+
 <b>documentos</b>: Aqui estarão todos os documentos do projeto, mas principalmente o <b>GDD (Game Design Document)/Documentação do Sistema</b>. Há uma pasta <b>antigos</b> onde estarão todas as versões antigas da documentação.
 
 <b>executáveis</b>: Aqui estarão todos os executáveis do jogo, prontos para rodar. Há uma pasta para <b>Web/HTML</b>.
