@@ -34,7 +34,7 @@ Alagoritmo visa ensinar o pensamento computacional e matemática para crianças 
 |-->imagens<br>
 |-->src<br>
 |-->versoesAntigasExecutaveis
-|readme.md<br>
+|-->readme.md<br>
 
 A pasta raiz contem dois arquivos que devem ser alterados:
 
