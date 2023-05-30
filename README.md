@@ -26,7 +26,7 @@ Alagoritmo visa ensinar o pensamento computacional e matemática para crianças 
 |-->docs<br>
 |-->documentos<br>
   &emsp;|-->antigos<br>
-  &emsp;|GDD.docx ou Documentação.docx<br>
+  &emsp;|-->GDD.docx ou Documentação.docx<br>
 |-->executáveis<br>
   &emsp;|-->Android<br>
   &emsp;|-->HTML<br>
@@ -42,10 +42,10 @@ A pasta raiz contem dois arquivos que devem ser alterados:
 
 Há também 4 pastas que seguem da seguinte forma:
 
-<b>docs</b>: Aqui serão colocados os arquivos compilados em HTML do jogo.
+<b>docs</b>: Aqui serão colocados os arquivos compilados em HTML do jogo.<br>
 <b>documentos</b>: Aqui estarão todos os documentos do projeto, mas principalmente o <b>GDD (Game Design Document)/Documentação do Sistema</b>. Há uma pasta <b>antigos</b> onde estarão todas as versões antigas da documentação.
 
-<b>executáveis</b>: Aqui estarão todos os executáveis do jogo, prontos para rodar. Há no mínimo 3 pastas, uma para binários <b>Windows</b>, uma para binários <b>android</b> e uma para a <b>Web/HTML</b>
+<b>executáveis</b>: Aqui estarão todos os executáveis do jogo, prontos para rodar. Há uma pasta para <b>Web/HTML</b>.
 
 <b>imagens</b>: Algumas imagens do jogo/sistema e logos prontos para serem utilizados e visualizados.
 
@@ -56,12 +56,12 @@ Há também 4 pastas que seguem da seguinte forma:
 <b>HTML:</b>
 
 Não há instalação!
-Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser). Ou acesse diretamente clicando <a href="https://2023m1t7-inteli.github.io/grupo2/">aqui</a>
+Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser). Ou acesse diretamente clicando <a href="https://2023m1t7-inteli.github.io/grupo2/">aqui</a>.
 
 ## 💻 Configuração para Desenvolvimento
 
 1 - Faça o download do GODOT e deste repositório. <br>
-2 - Abra o GODOT, ao ser prontificado clique em IMPORTAR. <br>
+2 - Abra o GODOT, ao ser prontificado clique em <b>IMPORTAR</b>. <br>
 3 - Selecione a pasta onde descompactou este repositório.
 
 Para abrir este projeto você necessita das seguintes ferramentas:
