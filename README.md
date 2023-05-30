@@ -27,16 +27,18 @@ Alagoritmo visa ensinar o pensamento computacional e matemática para crianças 
 
 -Raiz<br>
 |<br>
+|-->código<br>
 |-->docs<br>
 |-->documentos<br>
   &emsp;|-->antigos<br>
   &emsp;|GDD.docx ou Documentação.docx<br>
 |-->executáveis<br>
-  &emsp;|-->windows<br>
-  &emsp;|-->android<br>
+  &emsp;|-->Android<br>
   &emsp;|-->HTML<br>
+  &emsp;|-->Windows<br>
 |-->imagens<br>
 |-->src<br>
+|-->versoesAntigasExecutaveis
 |readme.md<br>
 
 A pasta raiz contem dois arquivos que devem ser alterados:
