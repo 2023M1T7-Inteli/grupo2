@@ -167,7 +167,4 @@ Aqui estão as referências usadas no projeto.
 1. <https://laart.art.br/blog/cordeis-famosos/>
 2. <http://www.ablc.com.br/o-cordel/cordeis-digitalizados/>
 3. Créditos da música de fundo: <https://www.youtube.com/@Eki_Ms>
-4. Créditos da música intro do vídeo: <https://youtu.be/1lMy2sQ781A>
-5. Créditos da música da batalha do cangaceiro do vídeo: <https://youtu.be/uIfD2BKaD2k>
-6. Créditos da música do vídeo: <https://youtu.be/n8qtapi42hI>
-7. Arquivo de referências: <https://docs.google.com/document/d/1EEntEbpoMxJFLGPAsPr16n96g_bd3Fmm1Wt_mVEWNkQ/edit>
+4. Arquivo de referências: <https://docs.google.com/document/d/1EEntEbpoMxJFLGPAsPr16n96g_bd3Fmm1Wt_mVEWNkQ/edit>

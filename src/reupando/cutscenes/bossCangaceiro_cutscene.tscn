@@ -1,0 +1,250 @@
+[gd_scene load_steps=30 format=2]
+
+[ext_resource path="res://cenas_universais/mensagem_derrota.tscn" type="PackedScene" id=1]
+[ext_resource path="res://cutscenes/transicao.tscn" type="PackedScene" id=2]
+[ext_resource path="res://cenas_universais/mensagem_vitoria.tscn" type="PackedScene" id=3]
+[ext_resource path="res://cutscenes/bossCangaceiro_cutscene.gd" type="Script" id=5]
+[ext_resource path="res://assets/cangaceiro_run.png" type="Texture" id=6]
+[ext_resource path="res://assets/cenario_batalha.png" type="Texture" id=9]
+[ext_resource path="res://assets/cangaceiro_boss_dark.png" type="Texture" id=10]
+[ext_resource path="res://sons/pisadaCangaceiro.mp3" type="AudioStream" id=12]
+[ext_resource path="res://assets/plataforma.png" type="Texture" id=13]
+[ext_resource path="res://assets/plataforma_pequena.png" type="Texture" id=14]
+[ext_resource path="res://cenas_universais/jogador.tscn" type="PackedScene" id=16]
+[ext_resource path="res://cenas_universais/Dash/dash.tscn" type="PackedScene" id=19]
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 168, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 224, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 280, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 336, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 392, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 0, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 56, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 112, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 6 )
+region = Rect2( 512, 0, 256, 224 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 6 )
+region = Rect2( 0, 224, 256, 224 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 6 )
+region = Rect2( 256, 224, 256, 224 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 6 )
+region = Rect2( 512, 224, 256, 224 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 6 )
+region = Rect2( 0, 448, 256, 224 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 6 )
+region = Rect2( 256, 448, 256, 224 )
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
+"loop": true,
+"name": "dano",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
+"loop": true,
+"name": "idle",
+"speed": 1.0
+}, {
+"frames": [ SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 26 ), SubResource( 27 ) ],
+"loop": true,
+"name": "run",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=14]
+radius = 32.0
+height = 54.0
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 39, 38.25 )
+
+[node name="bossCangaceiro" type="Node2D"]
+script = ExtResource( 5 )
+tipo_transicao = 4
+duracao = 0.8
+
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 257, 171 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 9 )
+
+[node name="boss" type="KinematicBody2D" parent="."]
+position = Vector2( 389, 35 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="boss" type="AnimatedSprite" parent="boss"]
+position = Vector2( 298, 116 )
+scale = Vector2( 2.5, 2.5 )
+frames = SubResource( 7 )
+animation = "idle"
+frame = 1
+speed_scale = 0.5
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="boss"]
+position = Vector2( 318, 121 )
+shape = SubResource( 14 )
+
+[node name="dash" parent="." instance=ExtResource( 19 )]
+
+[node name="botoes" type="Node" parent="."]
+
+[node name="pisos" type="Node" parent="."]
+
+[node name="piso_esquerda" type="Area2D" parent="pisos"]
+position = Vector2( 48, 170 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="pisos/piso_esquerda"]
+scale = Vector2( 6, 5 )
+texture = ExtResource( 13 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pisos/piso_esquerda"]
+position = Vector2( 0.5, -69.75 )
+shape = SubResource( 8 )
+
+[node name="piso_centro" type="Area2D" parent="pisos"]
+position = Vector2( 103, 170 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="pisos/piso_centro"]
+scale = Vector2( 6, 5 )
+texture = ExtResource( 13 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pisos/piso_centro"]
+position = Vector2( 3, -69.75 )
+shape = SubResource( 8 )
+
+[node name="piso_direita" type="Area2D" parent="pisos"]
+position = Vector2( 161, 170 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="pisos/piso_direita"]
+scale = Vector2( 6, 5 )
+texture = ExtResource( 13 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pisos/piso_direita"]
+position = Vector2( 0.5, -69.75 )
+shape = SubResource( 8 )
+
+[node name="piso_cima_esquerda" type="Area2D" parent="pisos"]
+position = Vector2( 48, 107 )
+scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="pisos/piso_cima_esquerda"]
+scale = Vector2( 6, 5 )
+texture = ExtResource( 14 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pisos/piso_cima_esquerda"]
+position = Vector2( 0.5, -51.75 )
+shape = SubResource( 8 )
+
+[node name="piso_cima_centro" type="Area2D" parent="pisos"]
+position = Vector2( 103, 107 )
+scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="pisos/piso_cima_centro"]
+scale = Vector2( 6, 5 )
+texture = ExtResource( 14 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pisos/piso_cima_centro"]
+position = Vector2( 3, -51.75 )
+shape = SubResource( 8 )
+
+[node name="piso_cima_direita" type="Area2D" parent="pisos"]
+position = Vector2( 161, 107 )
+scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="pisos/piso_cima_direita"]
+scale = Vector2( 6, 5 )
+texture = ExtResource( 14 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pisos/piso_cima_direita"]
+position = Vector2( 0.5, -51.75 )
+shape = SubResource( 8 )
+
+[node name="mensagens" type="Node" parent="."]
+
+[node name="mensagem_vitoria" parent="mensagens" instance=ExtResource( 3 )]
+visible = false
+nivelRestart = "res://niveis/cordel1/bossC/bossCangaceiro.tscn"
+nivelProximo = "res://niveis/cordel2/bossSol/bossSol.tscn"
+
+[node name="mensagem_derrota" parent="mensagens" instance=ExtResource( 1 )]
+visible = false
+nivelRestart = "res://niveis/cordel1/bossC/bossCangaceiro.tscn"
+voltaMenu = "res://menu/menu.tscn"
+
+[node name="colisoes" type="Node" parent="."]
+
+[node name="Dash" parent="." instance=ExtResource( 19 )]
+
+[node name="jogador" parent="." instance=ExtResource( 16 )]
+position = Vector2( 106, 134 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 256, 151 )
+current = true
+
+[node name="transição" parent="." instance=ExtResource( 2 )]
+visible = false
+
+[node name="falas_aluado" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+
+[node name="falas_cangaceiro" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+
+[node name="sons" type="Node" parent="."]
+
+[node name="som_pisada" type="AudioStreamPlayer" parent="sons"]
+stream = ExtResource( 12 )

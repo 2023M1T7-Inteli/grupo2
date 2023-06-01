@@ -1,0 +1,246 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://menu/nuvem.gd" type="Script" id=1]
+[ext_resource path="res://menu/informacoes/cartas/Tela_cartas.gd" type="Script" id=2]
+[ext_resource path="res://assets/base_setas.png" type="Texture" id=3]
+[ext_resource path="res://assets/Retro Gaming.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/botao_volta.png" type="Texture" id=5]
+[ext_resource path="res://assets/base_unidades.png" type="Texture" id=6]
+[ext_resource path="res://assets/base_cartas.png" type="Texture" id=7]
+[ext_resource path="res://assets/cenario_farol_de_ponta_verde.png" type="Texture" id=8]
+[ext_resource path="res://assets/nuvenzinha.png" type="Texture" id=9]
+[ext_resource path="res://assets/background.png" type="Texture" id=10]
+[ext_resource path="res://assets/looping.png" type="Texture" id=11]
+[ext_resource path="res://assets/ampulheta.png" type="Texture" id=12]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 12.8
+height = 1.52588e-05
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 4 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Fundo_azul" type="Sprite" parent="."]
+position = Vector2( 252.478, 160.764 )
+scale = Vector2( 2.1, 2 )
+texture = ExtResource( 10 )
+
+[node name="nuvem" type="KinematicBody2D" parent="."]
+position = Vector2( 12, 73 )
+scale = Vector2( 2.5, 2.5 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="nuvem"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="nuvem"]
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 256, 143 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 57.0
+margin_top = 47.0
+margin_right = 477.0
+margin_bottom = 303.0
+rect_scale = Vector2( 1.00549, 1.21291 )
+rect_pivot_offset = Vector2( 223, 241 )
+color = Color( 0.415686, 0.643137, 0.933333, 0.913725 )
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+margin_left = 6.0
+margin_top = 40.0
+margin_right = 446.0
+margin_bottom = 488.0
+rect_rotation = -89.8
+rect_scale = Vector2( 0.086, 0.106 )
+texture_normal = ExtResource( 5 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 295, 166 )
+scale = Vector2( 1.26563, 1.45238 )
+texture = ExtResource( 7 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 120, 218 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 3 )
+offset = Vector2( 12.8572, 25.7143 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( 130, 117 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 3 )
+
+[node name="Sprite6" type="Sprite" parent="."]
+position = Vector2( 295, 57 )
+scale = Vector2( 0.638672, 0.717262 )
+texture = ExtResource( 6 )
+
+[node name="Sprite7" type="Sprite" parent="."]
+position = Vector2( 81, 176 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 3 )
+
+[node name="Sprite8" type="Sprite" parent="."]
+position = Vector2( 181, 175 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 169.0
+margin_top = 154.0
+margin_right = 194.0
+margin_bottom = 175.0
+rect_scale = Vector2( 0.871629, 1.90967 )
+custom_fonts/font = SubResource( 1 )
+text = "-->"
+
+[node name="Label2" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 68.0
+margin_top = 158.0
+margin_right = 93.0
+margin_bottom = 179.0
+rect_scale = Vector2( 1.00297, 1.73635 )
+custom_fonts/font = SubResource( 1 )
+text = "<--"
+
+[node name="Label8" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 269.136
+margin_top = 574.487
+margin_right = 281.136
+margin_bottom = 595.487
+rect_scale = Vector2( 1.18809, 1.65966 )
+custom_fonts/font = SubResource( 1 )
+text = "vasdasdadsdasasdaad"
+
+[node name="Label4" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 121.0
+margin_top = 218.0
+margin_right = 133.0
+margin_bottom = 239.0
+rect_scale = Vector2( 1.3221, 1.48678 )
+custom_fonts/font = SubResource( 1 )
+text = "v"
+
+[node name="Label5" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 61.0
+margin_top = 44.0
+margin_right = 270.0
+margin_bottom = 65.0
+rect_scale = Vector2( 0.80925, 1.51787 )
+custom_fonts/font = SubResource( 1 )
+text = "SETAS DE MOVIMENTO"
+
+[node name="Label6" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 280.0
+margin_top = 34.0
+margin_right = 303.0
+margin_bottom = 55.0
+rect_scale = Vector2( 1.13445, 2.20826 )
+custom_fonts/font = SubResource( 1 )
+text = "+2"
+
+[node name="Label9" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 328.0
+margin_top = 4.0
+margin_right = 414.0
+margin_bottom = 25.0
+rect_scale = Vector2( 0.894706, 1.25285 )
+custom_fonts/font = SubResource( 1 )
+text = "NÚMEROS"
+
+[node name="Label10" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 310.0
+margin_top = 104.0
+margin_right = 478.0
+margin_bottom = 125.0
+rect_scale = Vector2( 0.719267, 1.33382 )
+custom_fonts/font = SubResource( 1 )
+text = "CARTA DE ESPERA"
+
+[node name="Label11" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 317.0
+margin_top = 149.0
+margin_right = 643.0
+margin_bottom = 194.0
+rect_scale = Vector2( 0.506515, 0.627807 )
+custom_fonts/font = SubResource( 1 )
+text = "Utilze essa carta para FICAR na
+mesma posição (não se mover)"
+
+[node name="Ampulheta" type="Sprite" parent="."]
+position = Vector2( 295, 166 )
+scale = Vector2( 0.422727, 0.46875 )
+texture = ExtResource( 12 )
+
+[node name="Label12" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 310.0
+margin_top = 211.0
+margin_right = 488.0
+margin_bottom = 232.0
+rect_scale = Vector2( 0.719267, 1.33382 )
+custom_fonts/font = SubResource( 1 )
+text = "CARTA DE LOOPING"
+
+[node name="Sprite9" type="Sprite" parent="."]
+position = Vector2( 295, 265 )
+scale = Vector2( 1.25228, 1.45888 )
+texture = ExtResource( 11 )
+
+[node name="Label13" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 318.0
+margin_top = 254.0
+margin_right = 640.0
+margin_bottom = 299.0
+rect_scale = Vector2( 0.501625, 0.68906 )
+custom_fonts/font = SubResource( 1 )
+text = "Utilze essa carta para REPETIR
+o mesmo padrão de movimentos"
+
+[node name="Label14" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 121.0
+margin_top = 100.0
+margin_right = 133.0
+margin_bottom = 121.0
+rect_scale = Vector2( 1.36805, 1.9999 )
+custom_fonts/font = SubResource( 1 )
+text = "^"
+
+[node name="Label15" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 318.0
+margin_top = 37.0
+margin_right = 581.0
+margin_bottom = 106.0
+rect_scale = Vector2( 0.575845, 0.618802 )
+custom_fonts/font = SubResource( 1 )
+text = "DEPOIS de se  movimentar, 
+utilize os números para 
+resolver o problema "
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="pressed" from="TextureButton2" to="." method="_on_TextureButton2_pressed"]

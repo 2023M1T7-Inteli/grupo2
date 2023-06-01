@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/passouDoEstagio.mp3-7756b381e94b2889941a420108992b2f.mp3str"
+
+[deps]
+
+source_file="res://sons/passouDoEstagio.mp3"
+dest_files=[ "res://.import/passouDoEstagio.mp3-7756b381e94b2889941a420108992b2f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

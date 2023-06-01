@@ -1,0 +1,128 @@
+[gd_scene load_steps=6 format=2]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+	uniform float screen_width = 1920;
+	uniform float screen_height = 1080;
+	uniform vec2 center = vec2(0.5f);
+	uniform vec2 player = vec2(0.5f);
+
+	uniform float progress : hint_range(0,1);
+	uniform float pixel_size = 15.;
+	uniform float circle_size : hint_range(0,2) = 1.5;
+	uniform float curtains : hint_range(0,1) = 1.;
+
+	uniform int type : hint_range(0,4) = 0;
+
+	void fragment() {
+		//Tipo Diamante Pixel
+		if (type == 0) {
+			float xFraction = fract(FRAGCOORD.x / pixel_size);
+			float yFraction = fract(FRAGCOORD.y / pixel_size);
+			
+			float xDistance = abs(xFraction - 0.5);
+			float yDistance = abs(yFraction - 0.5);
+
+			if (xDistance + yDistance + UV.x + UV.y > progress * 4.) {
+				discard;
+			}
+		}
+		//Tipo Circulo no player
+		else if (type == 1) {
+			float ratio = screen_width / screen_height;
+			if (distance(player, vec2(mix(player.x, UV.x, ratio), UV.y)) < circle_size * (1.0 - progress)) {
+				COLOR.a = 0.;
+			}
+		}
+		//Tipo Circulo no Centro
+		else if (type == 2) {
+			float ratio = screen_width / screen_height;
+			if (distance(center, vec2(mix(center.x, UV.x, ratio), UV.y)) < circle_size * (1.0 - progress)) {
+				COLOR.a = 0.;
+			}
+		}
+		//Tipo Corte Vertical
+		else if (type == 3) {
+			if (distance(vec2(0.5, 0.5), vec2(UV.x, UV.x)) < curtains * (1.0 - progress)) {
+				COLOR.a = 0.;
+			}
+		}
+		//Tipo Corte Horizontal
+		else if (type == 4) {
+			if (distance(vec2(0.5, 0.5), vec2(UV.y, UV.y)) < curtains * (1.0 - progress)) {
+				COLOR.a = 0.;
+			}
+		}
+	}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/screen_width = 1920.0
+shader_param/screen_height = 1080.0
+shader_param/center = Vector2( 0.5, 0.5 )
+shader_param/player = Vector2( 0.5, 0.5 )
+shader_param/progress = 1.0
+shader_param/pixel_size = 15.0
+shader_param/circle_size = 1.5
+shader_param/curtains = 1.0
+shader_param/type = 4
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "transicao_apagar"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "transicao_aparecer"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.0 ]
+}
+
+[node name="transicao" type="CanvasLayer"]
+
+[node name="preenchimento" type="ColorRect" parent="."]
+material = SubResource( 2 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="animacao" type="AnimationPlayer" parent="preenchimento"]
+autoplay = "transicao_aparecer"
+anims/RESET = SubResource( 3 )
+anims/transicao_apagar = SubResource( 4 )
+anims/transicao_aparecer = SubResource( 5 )

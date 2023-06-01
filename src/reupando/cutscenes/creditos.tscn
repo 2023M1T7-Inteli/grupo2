@@ -1,0 +1,580 @@
+[gd_scene load_steps=80 format=2]
+
+[ext_resource path="res://assets/Retro Gaming.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://cutscenes/creditos.gd" type="Script" id=2]
+[ext_resource path="res://assets/logo_alagoritmo.png" type="Texture" id=3]
+[ext_resource path="res://assets/all4one_logo.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprite_muito_importante.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 15
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 11
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=74]
+size = 5
+font_data = ExtResource( 1 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 3 )
+region = Rect2( 368, 0, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 3 )
+region = Rect2( 736, 0, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 3 )
+region = Rect2( 1104, 0, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 3 )
+region = Rect2( 1472, 0, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 3 )
+region = Rect2( 1840, 0, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 3 )
+region = Rect2( 2208, 0, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 3 )
+region = Rect2( 2576, 0, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 312, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 3 )
+region = Rect2( 368, 312, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 3 )
+region = Rect2( 736, 312, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 3 )
+region = Rect2( 1104, 312, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 3 )
+region = Rect2( 1472, 312, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 3 )
+region = Rect2( 1840, 312, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 3 )
+region = Rect2( 2208, 312, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 3 )
+region = Rect2( 2576, 312, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 624, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 3 )
+region = Rect2( 368, 624, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 3 )
+region = Rect2( 736, 624, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 3 )
+region = Rect2( 1104, 624, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 3 )
+region = Rect2( 1472, 624, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 3 )
+region = Rect2( 1840, 624, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 3 )
+region = Rect2( 2208, 624, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 3 )
+region = Rect2( 2576, 624, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 936, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 3 )
+region = Rect2( 368, 936, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 3 )
+region = Rect2( 736, 936, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 3 )
+region = Rect2( 1104, 936, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 3 )
+region = Rect2( 1472, 936, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=32]
+atlas = ExtResource( 3 )
+region = Rect2( 1840, 936, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=33]
+atlas = ExtResource( 3 )
+region = Rect2( 2208, 936, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=34]
+atlas = ExtResource( 3 )
+region = Rect2( 2576, 936, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 1248, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 3 )
+region = Rect2( 368, 1248, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 3 )
+region = Rect2( 736, 1248, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 3 )
+region = Rect2( 1104, 1248, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 3 )
+region = Rect2( 1472, 1248, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 3 )
+region = Rect2( 1840, 1248, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 3 )
+region = Rect2( 2208, 1248, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 3 )
+region = Rect2( 2576, 1248, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 1560, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=44]
+atlas = ExtResource( 3 )
+region = Rect2( 368, 1560, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 3 )
+region = Rect2( 736, 1560, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=46]
+atlas = ExtResource( 3 )
+region = Rect2( 1104, 1560, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=47]
+atlas = ExtResource( 3 )
+region = Rect2( 1472, 1560, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=48]
+atlas = ExtResource( 3 )
+region = Rect2( 1840, 1560, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=49]
+atlas = ExtResource( 3 )
+region = Rect2( 2208, 1560, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=50]
+atlas = ExtResource( 3 )
+region = Rect2( 2576, 1560, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=51]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 1872, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=52]
+atlas = ExtResource( 3 )
+region = Rect2( 368, 1872, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=53]
+atlas = ExtResource( 3 )
+region = Rect2( 736, 1872, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=54]
+atlas = ExtResource( 3 )
+region = Rect2( 1104, 1872, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=55]
+atlas = ExtResource( 3 )
+region = Rect2( 1472, 1872, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=56]
+atlas = ExtResource( 3 )
+region = Rect2( 1840, 1872, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=57]
+atlas = ExtResource( 3 )
+region = Rect2( 2208, 1872, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=58]
+atlas = ExtResource( 3 )
+region = Rect2( 2576, 1872, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=59]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 2184, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=60]
+atlas = ExtResource( 3 )
+region = Rect2( 368, 2184, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=61]
+atlas = ExtResource( 3 )
+region = Rect2( 736, 2184, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=62]
+atlas = ExtResource( 3 )
+region = Rect2( 1104, 2184, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=63]
+atlas = ExtResource( 3 )
+region = Rect2( 1472, 2184, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=64]
+atlas = ExtResource( 3 )
+region = Rect2( 1840, 2184, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=65]
+atlas = ExtResource( 3 )
+region = Rect2( 2208, 2184, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=66]
+atlas = ExtResource( 3 )
+region = Rect2( 2576, 2184, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=67]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 2496, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=68]
+atlas = ExtResource( 3 )
+region = Rect2( 368, 2496, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=69]
+atlas = ExtResource( 3 )
+region = Rect2( 736, 2496, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=70]
+atlas = ExtResource( 3 )
+region = Rect2( 1104, 2496, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=71]
+atlas = ExtResource( 3 )
+region = Rect2( 1472, 2496, 368, 312 )
+
+[sub_resource type="AtlasTexture" id=72]
+atlas = ExtResource( 3 )
+region = Rect2( 1840, 2496, 368, 312 )
+
+[sub_resource type="SpriteFrames" id=73]
+animations = [ {
+"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ), SubResource( 72 ) ],
+"loop": false,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="cena_creditos" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 520.0
+margin_bottom = 1792.0
+color = Color( 0.0588235, 0.0588235, 0.0588235, 1 )
+
+[node name="creditos" type="VBoxContainer" parent="."]
+margin_left = 86.0
+margin_top = 313.0
+margin_right = 434.0
+margin_bottom = 1452.0
+
+[node name="feitopor" type="Label" parent="creditos"]
+margin_right = 348.0
+margin_bottom = 20.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "FEITO POR:"
+align = 1
+valign = 1
+
+[node name="feitopor-nome" type="Label" parent="creditos"]
+margin_top = 24.0
+margin_right = 348.0
+margin_bottom = 174.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Ana Martire
+Cecília Gonçalves
+Felipe Spina
+Felipe Braga
+Lucas de Luccas
+Mauro das Chagas
+Renan Feitosa
+Ricardo Novaes
+"
+align = 1
+valign = 1
+
+[node name="roteiropor" type="Label" parent="creditos"]
+margin_top = 178.0
+margin_right = 348.0
+margin_bottom = 198.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Roteiro:"
+align = 1
+valign = 1
+
+[node name="roteiropor-nome" type="Label" parent="creditos"]
+margin_top = 202.0
+margin_right = 348.0
+margin_bottom = 267.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Ana Martire
+Lucas de Luccas
+Renan Feitosa
+"
+align = 1
+valign = 1
+
+[node name="artes" type="Label" parent="creditos"]
+margin_top = 271.0
+margin_right = 348.0
+margin_bottom = 291.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Artes:"
+align = 1
+valign = 1
+
+[node name="artes-nome" type="Label" parent="creditos"]
+margin_top = 295.0
+margin_right = 348.0
+margin_bottom = 377.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Ana Martire
+Cecília Gonçalves
+Lucas de Luccas
+Mauro das Chagas
+"
+align = 1
+valign = 1
+
+[node name="concepcao" type="Label" parent="creditos"]
+margin_top = 381.0
+margin_right = 348.0
+margin_bottom = 401.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Concepção/Prototipação"
+align = 1
+valign = 1
+
+[node name="concepcao-nome" type="Label" parent="creditos"]
+margin_top = 405.0
+margin_right = 348.0
+margin_bottom = 453.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Mauro das Chagas
+Renan Feitosa
+"
+align = 1
+valign = 1
+
+[node name="cinematica" type="Label" parent="creditos"]
+margin_top = 457.0
+margin_right = 348.0
+margin_bottom = 477.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Cinemática:"
+align = 1
+valign = 1
+
+[node name="cinematica-nome" type="Label" parent="creditos"]
+margin_top = 481.0
+margin_right = 348.0
+margin_bottom = 529.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Mauro das Chagas
+Renan Feitosa
+"
+align = 1
+valign = 1
+
+[node name="programacao" type="Label" parent="creditos"]
+margin_top = 533.0
+margin_right = 348.0
+margin_bottom = 553.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Programação:"
+align = 1
+valign = 1
+
+[node name="programacao-nome" type="Label" parent="creditos"]
+margin_top = 557.0
+margin_right = 348.0
+margin_bottom = 656.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Ana Martire
+Felipe Spina
+Mauro das Chagas
+Renan Feitosa
+Ricardo Novaes
+"
+align = 1
+valign = 1
+
+[node name="sonoplastia" type="Label" parent="creditos"]
+margin_top = 660.0
+margin_right = 348.0
+margin_bottom = 680.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Sonoplastia:"
+align = 1
+valign = 1
+
+[node name="sonoplastia-nome" type="Label" parent="creditos"]
+margin_top = 684.0
+margin_right = 348.0
+margin_bottom = 766.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Felipe Braga
+Lucas de Luccas
+Mauro das Chagas
+Ricardo Novaes
+"
+align = 1
+valign = 1
+
+[node name="gdd" type="Label" parent="creditos"]
+margin_top = 770.0
+margin_right = 348.0
+margin_bottom = 790.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Game Design Document:"
+align = 1
+valign = 1
+
+[node name="gdd-nome" type="Label" parent="creditos"]
+margin_top = 794.0
+margin_right = 348.0
+margin_bottom = 910.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Ana Martire
+Cecília Gonçalves
+Felipe Braga
+Lucas de Luccas
+Mauro das Chagas
+Renan Feitosa
+"
+align = 1
+valign = 1
+
+[node name="agradecimento" type="Label" parent="creditos"]
+margin_top = 914.0
+margin_right = 348.0
+margin_bottom = 934.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Agradecimentos:"
+align = 1
+valign = 1
+
+[node name="agradecimento-nome" type="Label" parent="creditos"]
+margin_top = 938.0
+margin_right = 348.0
+margin_bottom = 1139.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Cláudia de Oliveira Lozada
+Fátima Toledo
+Flávio Marques
+Francisco Escobar
+Instituto de Tecnologia e Liderança
+Julia Stateri
+Luciano Galdino
+Sérgio Venâncio
+Universidade Federal de Alagoas
+
+
+Um agradecimento especial a todos os Testers!"
+align = 1
+valign = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 260, 152 )
+current = true
+
+[node name="Label" type="Label" parent="Camera2D"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 88.0
+margin_top = -146.0
+margin_right = 252.0
+margin_bottom = -132.0
+custom_fonts/font = SubResource( 74 )
+text = "Clique na tela para acelerar"
+align = 2
+valign = 1
+
+[node name="logo_alagoritmo" type="AnimatedSprite" parent="."]
+position = Vector2( 255, 149 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 73 )
+speed_scale = 3.5
+
+[node name="All4OneLogo" type="Sprite" parent="."]
+position = Vector2( 269, 1584 )
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 4 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_right = 528.0
+margin_bottom = 1792.0
+texture_normal = ExtResource( 5 )
+
+[connection signal="button_down" from="TextureButton" to="." method="_on_TextureButton_button_down"]
+[connection signal="button_up" from="TextureButton" to="." method="_on_TextureButton_button_up"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
